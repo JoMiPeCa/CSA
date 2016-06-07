@@ -12,5 +12,13 @@
  * @author cetecom
  */
 class Cliente {
-    //put your code here
+    
+    private $srun;
+    private $snombre;
+    private $apellidos;
+    private $csexo;
+    private $dfechanacimiento;
+    private $semail;
+    
+    
 }
