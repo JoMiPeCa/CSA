@@ -9,7 +9,7 @@
 /**
  * Description of newPHPClass
  *
- * @author cetecom
+ * @author Jonathan Espinoza Brain.
  */
 class newPHPClass {
     //put your code here
