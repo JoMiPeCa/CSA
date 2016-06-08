@@ -1,16 +1,14 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of Boleta
  *
- * @author cetecom
+ * @author JEB.
  */
 class Boleta {
-    //put your code here
+    private $sNumBoleta;
+    private $dFecha;
+    private $tHora;
+    private $sMedioPago;
+    private $nNumTarjeta;
+    
 }
