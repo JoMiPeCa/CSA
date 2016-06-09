@@ -9,80 +9,80 @@ and open the template in the editor.
 */
 BODY
 {
-    BACKGROUND-COLOR: #FFFFFF;
-    FONT-FAMILY: arial,helvetica;
+    background-color: #FFFFFF;
+    font-family: arial,helvetica;
 }
 A
 {
-    COLOR: #666666;
-    TEXT-DECORATION: none;
+    color: #666666;
+    text-decoration: none;
 }
 A:hover
 {
-    COLOR: #000000;
-    TEXT-DECORATION: underline;
+    color: #000000;
+    text-decoration: underline;
 }
 INPUT
 {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 9pt;
-    COLOR: #000000;
-    FONT-FAMILY: arial,helvetica;
+    font-weight: normal;
+    font-size: 9pt;
+    color: #000000;
+    font-family: arial,helvetica;
 }
 SELECT
 {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 9pt;
-    COLOR: black;
-    FONT-FAMILY: arial,helvetica;
+    font-weight: normal;
+    font-size: 9pt;
+    color: black;
+    font-family: arial,helvetica;
 }
 RADIO
 {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 9pt;
-    COLOR: #000000;
-    FONT-FAMILY: arial,helvetica;
+    font-weight: normal;
+    font-size: 9pt;
+    color: #000000;
+    font-family: arial,helvetica;
 }
 .bigtitle
 {
-    FONT-WEIGHT: bold;
-    FONT-SIZE: 16pt;
-    COLOR: #000000;
-    FONT-FAMILY: Arial,helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #000000;
+    font-family: Arial,helvetica,sans-serif;
 }
 .midtitle
 {
-    FONT-WEIGHT: bold;
-    FONT-SIZE: 12pt;
-    COLOR: #333333;
-    FONT-FAMILY: Arial,helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    color: #333333;
+    font-family: Arial,helvetica,sans-serif;
 }
 .smalltitle
 {
-    FONT-WEIGHT: bold;
-    FONT-SIZE: 10pt;
-    COLOR: #333333;
-    FONT-FAMILY: Arial,helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #333333;
+    font-family: Arial,helvetica,sans-serif;
 }
 .txtnormal
 {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 8pt;
-    COLOR: #000000;
-    FONT-FAMILY: Geneva, Arial, Helvetica, san-serif;
+    font-weight: normal;
+    font-size: 8pt;
+    color: #000000;
+    font-family: Geneva, Arial, Helvetica, san-serif;
 }
 .txttable
 {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 8pt;
-    COLOR: #333333;
-    FONT-FAMILY: Arial,helvetica,sans-serif;
-    TEXT-ALIGN: right;
+    font-weight: normal;
+    font-size: 8pt;
+    color: #333333;
+    font-family: Arial,helvetica,sans-serif;
+    text-align: right;
 }
 A.whitelink
 {
-    COLOR: #FFFFFF;
-    FONT-FAMILY: Arial, Helvetica,sans-serif;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica,sans-serif;
 }
 A.whitelink:active
 {
@@ -92,172 +92,160 @@ A.whitelink:visited
 }
 A.whitelink:hover
 {
-    COLOR: #FFFFFF;
-    FONT-FAMILY: Arial, Helvetica,sans-serif;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica,sans-serif;
 
-    TEXT-DECORATION: underline;
+    text-decoration: underline;
 }
 A.forasubject
 {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 8pt;
-    COLOR: #000000;
-    FONT-FAMILY: Arial, Helvetica,sans-serif;
-    TEXT-DECORATION: underline;
+    font-weight: normal;
+    font-size: 8pt;
+    color: #000000;
+    font-family: Arial, Helvetica,sans-serif;
+    text-decoration: underline;
 }
 A.forasubject:active
 {
-    COLOR: #000000;
+    color: #000000;
 }
 A.forasubject:visited
 {
-    COLOR: #000000;
+    color: #000000;
 }
 A.forasubject:hover
 {
-    COLOR: #8E1624;
-    TEXT-DECORATION: underline;
+    color: #8E1624;
+    text-decoration: underline;
 }
 TD
 {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 8pt;
-    COLOR: #000000;
-    FONT-FAMILY: Geneva, Arial, Helvetica, san-serif;
+    font-weight: normal;
+    font-size: 8pt;
+    color: #000000;
+    font-family: Geneva, Arial, Helvetica, san-serif;
 }
 
 A.linkamarillo:visited {
-	font-size:11;
+	font-size:11pt;
 	color:#C89904;
 	text-decoration: underline;
 } 
 A.linkamarillo:active {
-	font-size:11;
+	font-size:11pt;
 	color:#C89904;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkamarillo:link {
-	font-size:11;
+	font-size:11pt;
 	color:#C89904;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkamarillo:hover {
-	font-size:11;
+	font-size:11pt;
 	color:#666666;
 	text-decoration: none;
 } 
 A.linkmarron:visited {
-	font-size:11;
+	font-size:11pt;
 	color:#53452A;
 	text-decoration: underline;
 } 
 A.linkmarron:active {
-	font-size:11;
+	font-size:11pt;
 	color:#53452A;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkmarron:link {
-	font-size:11;
+	font-size:11pt;
 	color:#53452A;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkmarron:hover {
-	font-size:11;
+	font-size:11pt;
 	color:#666666;
 	text-decoration: none;
 }
 
 A.linkrojo:visited {
-	font-size:11;
+	font-size:11pt;
 	color:#A63728;
 	text-decoration: underline;
 } 
 A.linkrojo:active {
-	font-size:11;
+	font-size:11pt;
 	color:#A63728;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkrojo:link {
-	font-size:11;
+	font-size:11pt;
 	color:#A63728;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkrojo:hover {
-	font-size:11;
+	font-size:11pt;
 	color:#666666;
 	text-decoration: none;
 }
 
 A.linkverde:visited {
-	font-size:11;
+	font-size:11pt;
 	color:#84AA00;
 	text-decoration: underline;
 } 
 A.linkverde:active {
-	font-size:11;
+	font-size:11pt;
 	color:#84AA00;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkverde:link {
-	font-size:11;
+	font-size:11pt;
 	color:#84AA00;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkverde:hover {
-	font-size:11;
+	font-size:11pt;
 	color:#666666;
 	text-decoration: none;
 }
 
 A.linkmorado:visited {
-	font-size:11;
+	font-size:11pt;
 	color:#61497C;
 	text-decoration: underline;
 } 
 A.linkmorado:active {
-	font-size:11;
+	font-size:11pt;
 	color:#61497C;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkmorado:link {
-	font-size:11;
+	font-size:11pt;
 	color:#61497C;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkmorado:hover {
-	font-size:11;
+	font-size:11pt;
 	color:#666666;
 	text-decoration: none;
 }
 A.linkazul:visited {
-	font-size:11;
+	font-size:11pt;
 	color:#0599dd;
 	text-decoration: underline;
 } 
 A.linkazul:active {
-	font-size:11;
+	font-size:11pt;
 	color:#0599dd;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkazul:link {
-	font-size:11;
+	font-size:11pt;
 	color:#0599dd;
 	text-decoration: underline;
-	font-weight: none;
 } 
 A.linkazul:hover {
-	font-size:11;
+	font-size:11pt;
 	color:#666666;
 	text-decoration: none;
 }

@@ -1,9 +1,7 @@
 <body bgcolor="#d1dbe4" topmargin="10">
-
     <table width="780" border="0" align="center" valign="top" cellpadding="0" cellspacing="0">
         <tr>
             <td valign="top" bgcolor="#ffffff">
-
         <html>
             <head>
                 <TITLE>Ferreteria Ortiz - Ferretería Ortiz</TITLE>
@@ -73,7 +71,7 @@
 
             </head>
 
-            <link href="css/ie.css" rel="stylesheet" type="text/css">
+            <link href="css/ie.css" rel="stylesheet" >
             <BODY text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3 bgColor=#ffffff topMargin=10>
                 <div class="topLine">
                     <script src="http://j.maxmind.com/app/geoip.js"></script>
