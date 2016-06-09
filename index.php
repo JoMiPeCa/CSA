@@ -17,7 +17,7 @@
                 <META id="_TopLeft_metaRevisitAfter" NAME="Revisit-After" content="15 Days"></META>
                 <META id="_TopLeft_metaDistribution" NAME="Distribution" content="Global"></META>
                 <META id="_TopLeft_metaRobots" NAME="Robots" content="All"></META>
-
+                <link href="css/ie.css" rel="stylesheet" >
                 <SCRIPT language=javaScript>
                     function openHelp()
                     {
@@ -71,7 +71,7 @@
 
             </head>
 
-            <link href="css/ie.css" rel="stylesheet" >
+
             <BODY text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3 bgColor=#ffffff topMargin=10>
                 <div class="topLine">
                     <script src="http://j.maxmind.com/app/geoip.js"></script>
@@ -1716,7 +1716,7 @@
             </tr>
 
         </table>
-                    <!--FIN FRANJA IZQUIERDA-->
+        <!--FIN FRANJA IZQUIERDA-->
         <br>
         <br>
         <br>
@@ -1730,17 +1730,17 @@
                     <area shape="rect" coords="265,8,360,25" href="category.aspx?special=MS" alt="Los m&aacute;s vendidos">
                     <area shape="rect" coords="367,9,434,25" href="a2z.aspx" alt="Listado AZ">
                 </map>
-            
-            <SCRIPT LANGUAGE="JavaScript">
-                function popUp(url) {
-                    sealWin = window.open(url, "win", 'toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=500,height=450');
-                    self.name = "mainWin";
-                }
-            </SCRIPT>
 
-            <!--/Content area-->
+                <SCRIPT LANGUAGE="JavaScript">
+                    function popUp(url) {
+                        sealWin = window.open(url, "win", 'toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=500,height=450');
+                        self.name = "mainWin";
+                    }
+                </SCRIPT>
 
-            <!--Base structure-->
+                <!--/Content area-->
+
+                <!--Base structure-->
         </td>
 
         <!--/Base structure-->
@@ -1793,7 +1793,7 @@
                             </table></td>
                     </tr>
                 </table></td>
-            
+
         </tr>
     </table>
     <br>
