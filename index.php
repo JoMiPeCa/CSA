@@ -73,7 +73,7 @@
 
             </head>
 
-            <link rel="stylesheet" href="css/ie.css">
+            <link href="css/ie.css" rel="stylesheet" type="text/css">
             <BODY text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3 bgColor=#ffffff topMargin=10>
                 <div class="topLine">
                     <script src="http://j.maxmind.com/app/geoip.js"></script>
