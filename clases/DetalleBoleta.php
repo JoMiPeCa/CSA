@@ -1,16 +1,74 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of DetalleBoleta
  *
- * @author cetecom
+ * @author Jorge Muñoz
  */
 class DetalleBoleta {
-    //put your code here
+    
+    private $nNumBoleta;
+    private $sNombreProducto;
+    private $nCantidad;
+    private $nPrecioUnitario;
+    private $nTotal;
+    private $nMesesGarantia;
+    
+    function __construct($nNumBoleta, $sNombreProducto, $nCantidad, $nPrecioUnitario, $nTotal, $nMesesGarantia) {
+        $this->nNumBoleta = $nNumBoleta;
+        $this->sNombreProducto = $sNombreProducto;
+        $this->nCantidad = $nCantidad;
+        $this->nPrecioUnitario = $nPrecioUnitario;
+        $this->nTotal = $nTotal;
+        $this->nMesesGarantia = $nMesesGarantia;
+    }
+
+    function getNNumBoleta() {
+        return $this->nNumBoleta;
+    }
+
+    function getSNombreProducto() {
+        return $this->sNombreProducto;
+    }
+
+    function getNCantidad() {
+        return $this->nCantidad;
+    }
+
+    function getNPrecioUnitario() {
+        return $this->nPrecioUnitario;
+    }
+
+    function getNTotal() {
+        return $this->nTotal;
+    }
+
+    function getNMesesGarantia() {
+        return $this->nMesesGarantia;
+    }
+
+    function setNNumBoleta($nNumBoleta) {
+        $this->nNumBoleta = $nNumBoleta;
+    }
+
+    function setSNombreProducto($sNombreProducto) {
+        $this->sNombreProducto = $sNombreProducto;
+    }
+
+    function setNCantidad($nCantidad) {
+        $this->nCantidad = $nCantidad;
+    }
+
+    function setNPrecioUnitario($nPrecioUnitario) {
+        $this->nPrecioUnitario = $nPrecioUnitario;
+    }
+
+    function setNTotal($nTotal) {
+        $this->nTotal = $nTotal;
+    }
+
+    function setNMesesGarantia($nMesesGarantia) {
+        $this->nMesesGarantia = $nMesesGarantia;
+    }
+
+
 }

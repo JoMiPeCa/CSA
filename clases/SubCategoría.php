@@ -1,16 +1,35 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of SubCategoría
  *
- * @author cetecom
+ * @author Jorge Muñoz
  */
 class SubCategoría {
-    //put your code here
+    
+    private $nCodigo;
+    private $sNombreSCateg;
+    
+    function __construct($nCodigo, $sNombreSCateg) {
+        $this->nCodigo = $nCodigo;
+        $this->sNombreSCateg = $sNombreSCateg;
+    }
+
+    function getNCodigo() {
+        return $this->nCodigo;
+    }
+
+    function getSNombreSCateg() {
+        return $this->sNombreSCateg;
+    }
+
+    function setNCodigo($nCodigo) {
+        $this->nCodigo = $nCodigo;
+    }
+
+    function setSNombreSCateg($sNombreSCateg) {
+        $this->sNombreSCateg = $sNombreSCateg;
+    }
+
+
 }
