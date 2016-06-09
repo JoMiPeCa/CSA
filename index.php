@@ -17,7 +17,7 @@
                 <META id="_TopLeft_metaRevisitAfter" NAME="Revisit-After" content="15 Days"></META>
                 <META id="_TopLeft_metaDistribution" NAME="Distribution" content="Global"></META>
                 <META id="_TopLeft_metaRobots" NAME="Robots" content="All"></META>
-                <link href="css/ie.css" rel="stylesheet" >
+                <link href="css/ie.css" rel="stylesheet" type="text/css" >
                 <SCRIPT language=javaScript>
                     function openHelp()
                     {
@@ -68,10 +68,9 @@
 
                 </script>
 
-
             </head>
-
-
+            
+            
             <BODY text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3 bgColor=#ffffff topMargin=10>
                 <div class="topLine">
                     <script src="http://j.maxmind.com/app/geoip.js"></script>
