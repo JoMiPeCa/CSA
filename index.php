@@ -128,7 +128,7 @@
                 <table width="908" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
                         <td width="12" height="67"><img src="images/izq_sup_degradado.gif" width="12" height="67"></td>
-                        <td width="156"><a href="default.aspx"><img src="images/logo_1.gif" width="156" height="67" border="0"></A></td>
+                        <td width="156"><a href="default.aspx"><img src="images/logo.gif" width="156" height="67" border="0"></A></td>
                         <td height="67" background="images/fondo_sup_degradado.gif"><table width="100%" height="67"  border="0" cellpadding="0" cellspacing="0">
                                 <tr valign="bottom">
                                     <td colspan="3"><table width="94%"  border="0" align="center" cellpadding="0" cellspacing="0">
