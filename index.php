@@ -11,64 +11,16 @@
                 <META id="_TopLeft_metaKeywords" NAME="Keywords" content="Abrazaderas, Accesorios ba&amp;ntilde;o, Aceites, Adhesivos, Adornos, Alambres, Alcayatas, Alcotanas, Aldaba, Aldabilla, Alicates, Alzapa&amp;ntilde;os, Amaestramiento, Amoladoras, Angulo, Anillas, Antipanicos, Antirrobos, Aplacadoras, Apliques, Apliques para luz, Aprieto, Arandelas, Archivadores, Arcos de segueta, Arcos de sierra, Armeros, Asas, Aspiradores, Avellanadores, Barandilla, Barras, Barrenas, Baterias, Berbiquis, Bisagras, Bloqueador, Bocallaves, Bombillos, botiquines, Brocas, Burletes, Buzones, Cadenas, Cajas fuertes, Calibres, Campanas, Candados, Cantoneras, capitel, Cariatides, Carretilla, Carriles, Cartelas, casquillos, Cazoletas, Cepillos, Cerraderos, Cerraduras, Cerraduras mueble, Cerrojillos, Cerrojo, Cestas, Chapas, Cierrapuertas, Cierre, Cinceles, Cinturoneros, Cizallas, Clavadoras, Clavos, Colgantes, Collarines, Compases, Compresores, Condena, Corbateros, Coronas, Correderas, Cortador, Cortafrios, Cortatubos, Cremonas, Cuadradillo, Cuchillos, Cuerda, Cutters, Decaparadores, Desbloqueo, Destornilladores, Dosificadores, Dremel, Electricidad, Electrodos, Engletadoras, Ensambles, Escaleras, Escobilleros, Escofinas, Escuadras, Eses, Espatulas, Espejos, Fallebas, Fieltros, Figuras, Filete, Flesadoras, Flexometros, Formones, Ganchos, Garras, Garrotas, Gramiles, Granetes, Grapadoras, Grapas, Griferias, Grisans, Guantes, Gubias, Guias, Guillamenes, Hachas, Hembrillas, Herramientas, Husillos, Imanes, Ingletadoras, Jaboneras, Lavabos, Letras, Letreros, Lija, Lijadoras, Limas, Limpieza, Linternas, Llamadores, Llanas, Llaveros, Llaves, Lubricantes, Macetas, Macollas, Mamparas, Mangos, Manilla, Manillon, Martillos, Mascaras, Mazas, Mecanismos, Metopas, Mirillas, Moldura, Muebles, Muelas, Muelles, Muletillas, Multiusos, niveles, Nudos, Numeros, Paletas, Pantaloneros, Papeleras, Pasacables, Pasadores, Pasamanos, Pasamonedas, Patas, Pegamentos, Perchas, Pernios, Picaporte, Piedras, Pinchos, Pinzas, pistola, Placa limpieza, Plataformas, Platos, Pletinas, Poleas, Pomos, Portacepillos, Portaestantes, Portallaves, Portarollos, Portavasos, Prensas, Producto para madera, Puntas, Punteros, Punzones, ba&amp;ntilde;os, cerrajer&amp;iacute;a, decoracion, decoraci&amp;oacute;n, ferreteria, herrajes, herramienta, interiorismo, manilla, metalisteria, pomos, productos ferreteria, zitro, zitroherrajes"></META>
                 <META id="_TopLeft_metaLanguage" NAME="Language" content="español - spanish"></META>
                 <META id="_TopLeft_metaRobots" NAME="Robots" content="All"></META>
-               
+
                 <link href="css/ie.css" rel="stylesheet" type="text/css" >
             </head>
 
             <BODY text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3 bgColor=#ffffff topMargin=10>
-                <div class="topLine">
-                    <div id="barritaloca" style="width:100%;background: #333333;color:#dddddd;display:none">
-                        <div style="width:100%;padding-left:5px;font-family:verdana;font-size:12px;padding-top:10px;padding-bottom:10px;height:50px;line-height:2em">
-                            Usamos cookies propias y de terceros para mejorar su experiencia de navegaci&oacute;n. Si continua navegando consideramos que acepta el uso de cookies.
-                            <a href="javascript:void(0);" style="padding:4px;background:#4682B4;text-decoration:none;color:#fff;" onclick="PonerCookie();"><b>Aceptar</b></a>
-                        </div>
-                    </div>
-                </div>
 
-
-                <script type="text/javascript">
-                    window.onload = function () {
-                        if (geoip_country_code() == "ES" && getCookie('aviso') != "1") {
-                            document.getElementById("barritaloca").style.display = "block";
-                        }
-                    }
-
-
-                    function getCookie(c_name) {
-                        var c_value = document.cookie;
-                        var c_start = c_value.indexOf(" " + c_name + "=");
-                        if (c_start == -1) {
-                            c_start = c_value.indexOf(c_name + "=");
-                        }
-                        if (c_start == -1) {
-                            c_value = null;
-                        } else {
-                            c_start = c_value.indexOf("=", c_start) + 1;
-                            var c_end = c_value.indexOf(";", c_start);
-                            if (c_end == -1) {
-                                c_end = c_value.length;
-                            }
-                            c_value = unescape(c_value.substring(c_start, c_end));
-                        }
-                        return c_value;
-                    }
-                    function setCookie(c_name, value, exdays) {
-                        var exdate = new Date();
-                        exdate.setDate(exdate.getDate() + exdays);
-                        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
-                        document.cookie = c_name + "=" + c_value;
-                    }
-
-
-                    function PonerCookie() {
-                        setCookie('aviso', '1', 365);
-                        document.getElementById("barritaloca").style.display = "none";
-                    }
-                </script>
                 <table width="908" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
                         <td width="12" height="67"><img src="images/izq_sup_degradado.gif" width="12" height="67"></td>
-                        <td width="156"><a href="default.aspx"><img src="images/logo.gif" width="156" height="67" border="0"></A></td>
+                        <td width="156"><a href="index.php"><img src="images/logo.gif" width="156" height="67" border="0"></A></td>
                         <td height="67" background="images/fondo_sup_degradado.gif"><table width="100%" height="67"  border="0" cellpadding="0" cellspacing="0">
                                 <tr valign="bottom">
                                     <td colspan="3"><table width="94%"  border="0" align="center" cellpadding="0" cellspacing="0">
@@ -171,7 +123,7 @@
                 <!--/Base structure-->
 
                 <!--RIGHT-->
-<td bgcolor="#ffffff" width="168" align="left" valign="top">
+                <td bgcolor="#ffffff" width="168" align="left" valign="top">
                     <!--/Base structure-->
                     <!--FRANJA DERECHA-->
                     <?php
