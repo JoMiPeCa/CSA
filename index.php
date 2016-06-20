@@ -139,7 +139,7 @@
                                 </tr>
                                 <tr>
                                     <td width="66%" align="center"><img src="images/lomasdelcatalogo.gif" width="445" height="31" border="0" usemap="#Map"></td>
-                                    <td width="17%" align="center"><a href="customercenter.aspx"><img src="images/areadecliente.gif" alt="&Aacute;rea de cliente" width="124" height="31" border="0"></a></td>
+                                    <td width="17%" align="center"><a href="accLogin.php"><img src="images/areadecliente.gif" alt="&Aacute;rea de cliente" width="124" height="31" border="0"></a></td>
                                     <td width="17%" align="center"><a href="basket.aspx"><img src="images/micesta.gif" alt="Mi cesta" width="110" height="31" border="0"></a></td>
                                 </tr>
                             </table></td>
@@ -228,7 +228,17 @@
                 <!--/Base structure-->
 
                 <!--RIGHT-->
-
+<td bgcolor="#ffffff" width="168" align="left" valign="top">
+                    <!--/Base structure-->
+                    <!--FRANJA DERECHA-->
+                    <?php
+                    require './franjaDerecha.php';
+                    ?>
+                    <!--FIN FRANJA DERECHA-->
+                    <br>
+                    <br>
+                    <br>
+                </td>
 
             </tr>
         </table>
