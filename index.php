@@ -50,19 +50,22 @@
                                                 <td><a href="http://www.elblogdeferreteriaortiz.es" target="_blank"><img src="images/blog.gif" alt="Siguenos en nuestro blog" width="23" height="23" border="0"></a></td>
                                             </tr>
                                         </table></td>
-                                    <td width="64%"><table width="90%" border="0" align="right" cellpadding="0" cellspacing="0">
+                                    <td width="64%">
+                                        <table width="90%" border="0" align="right" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="100%" valign="top">
                                                     <p align="LEFT">
-                                                    <form name=deptForm action="http://www.ferreteriaortiz.es/store/category.aspx" method="get" target="_top">
+                                                    <form name=deptForm action="#" method="get" target="_top">
                                                         Acceso rápido a... 
                                                         <?php
                                                         require ('./accesoRapidoCategorias.php');
                                                         ?>
                                                     </form>
-                                                    </p></td>
+                                                    </p>
+                                                </td>
                                             </tr>
-                                        </table></td>
+                                        </table>
+                                    </td>
                                     <td width="24%">
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                             <tr>
@@ -70,7 +73,7 @@
                                                 <td width="26%" align="right" valign="middle">buscar:&nbsp;</td>
                                                 <td width="59%" align="right"><input NAME="find" TYPE="text" SIZE="20,1" MAXLENGTH="50" value=""></td>
                                                 <td width="15%" align="right"><input name="boton" type="image" src="images/head/ir.gif" width="20" height="18" border=0 value="Buscar"></td>
-                                            </FORM>
+                                            </form>
                                 </tr>
                             </table></td>
 
