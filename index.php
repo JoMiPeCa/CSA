@@ -109,34 +109,14 @@
                             </BODY>
                         </HTML>	</td>
                 </tr>
-            </table>
+            </table>            
             <map name="Map">
-                <area shape="circle" coords="434,35,49" href="http://www.ferreteriaortiz.es/store/promo_nespresso.pdf" target="_blank">
-                <area shape="rect" coords="4,2,373,79" href="http://www.ferreteriaortiz.es/store/item.aspx?item_id=0309.0087">
+                <area shape="rect" coords="127,8,171,25" href="#" alt="Ofertas">
+                <area shape="rect" coords="183,9,256,25" href="#" alt="Novedades">
+                <area shape="rect" coords="265,8,360,25" href="#" alt="Los m&aacute;s vendidos">
+                <area shape="rect" coords="367,9,434,25" href="#" alt="Listado AZ">
             </map>
-
-            =======
-            <map name="Map">
-                <area shape="rect" coords="127,8,171,25" href="category.aspx?special=O" alt="Ofertas">
-                <area shape="rect" coords="183,9,256,25" href="category.aspx?special=N" alt="Novedades">
-                <area shape="rect" coords="265,8,360,25" href="category.aspx?special=MS" alt="Los m&aacute;s vendidos">
-                <area shape="rect" coords="367,9,434,25" href="a2z.aspx" alt="Listado AZ">
-            </map>
-
-            <SCRIPT LANGUAGE="JavaScript">
-                function popUp(url) {
-                    sealWin = window.open(url, "win", 'toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=500,height=450');
-                    self.name = "mainWin";
-                }
-            </SCRIPT>
-
-            <!--/Content area-->
-
-            <!--Base structure-->
         </td>
-
-        <!--/Base structure-->
-
         <!--RIGHT-->
         <td bgcolor="#ffffff" width="168" align="left" valign="top">
             <!--/Base structure-->
@@ -169,5 +149,4 @@ require 'franjaBase.php';
     <area shape="rect" coords="4,2,373,79" href="http://www.ferreteriaortiz.es/store/item.aspx?item_id=0309.0087">
 </map>
 </body>
-</html>	
->>>>>>> origin/master
+</html>
