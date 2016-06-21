@@ -647,48 +647,5 @@
     <table border="0" bordercolor=red width="100%" cellspacing="0" cellpadding="0">
         <tr>
 
-            <td width="100%"><div align="center">
-                    <table width="780" height="81" border="0">
-                        <tr> 
-                            <td width="17%" rowspan="2" align="center"> <p><font size="1" face="Verdana, Arial, Helvetica, sans-serif">Diseño:</font> <br>
-                                    <a href="http://www.zampatroup.com" target="_blank"><img src="images/logo_zampa.gif" width="120" height="39" border="0"></A> </td>
-                            <td width="72%" align="center">&nbsp;</td>
-                            <td width="11%" rowspan="2" align="left">
-                                <table width="135" border="0" cellpadding="2" cellspacing="0" title="Click to Verify - This site chose VeriSign Trust Seal to promote trust online with consumers.">
-                                    <tr>
-                                        <td width="135" align="center" valign="top"><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.ferreteriaortiz.es&amp;size=L&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=es"></script><br />
-                                            <a href="http://www.verisign.com/verisign-trust-seal" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ACERCA DE LA CONFIANZA EN LINEA</a></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" valign="top"><FONT face=VERDANA,ARIAL,HELVETICA size=1><A href="http://www.bbv.es/" target=_blank><IMG src="images/bbv.gif" width=51 height=25 hspace="10" border=0></A> 
-                                <A href="http://www.zitroherrajes.com" target=_blank><IMG src="images/logo_zitro.gif" width=88 height=29 hspace="10" border=0></A> 
-                                <A href="http://www.microsoft.es/" target=_blank><IMG src="images/microsoft.gif" width=60 height=16 hspace="10" border=0></A> 
-                                <A href="http://seur.es/" target=_blank><IMG src="images/seur.gif" width=80 height=14 hspace="10" border=0></A> 
-                                </FONT></td>
-                        </tr>
-                    </table>
-
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" valign="middle" background="images/fondo_pie.gif"><table width="90%"  border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td height="31" align="center" valign="middle">( <A href="legal.aspx" target="_blank" class="whitelink">Aviso legal</A> ) ( <A href="privacy.aspx" target="_blank" class="whitelink">Privacidad</A> ) ( <a href="generalConditions.aspx" target="_blank" class="whitelink">Condiciones generales</a> ) ( <a href="thursday.aspx" target="_blank" class="whitelink">Miembro de la Comunidad Thursday</a> ) ( <a href="mapaweb.aspx" target="_blank" class="whitelink">Mapa web</a> )  <b>Una web de Ferretería Ortiz, S.A. CIF:A28988673</B></td>
-                        <td width="1" align="center" valign="top"><img src="images/pixel_trans.gif" width="1" height="31"></td>
-                    </tr>
-
-                </table></td>
-        </tr>
-    </table>
-</div>
-<!--BOTTOM-->
 
 </BODY>
-</HTML>
-</td>
-</tr>
-</table>
