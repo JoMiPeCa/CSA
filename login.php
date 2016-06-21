@@ -11,7 +11,10 @@ include 'librerias.php';
         <link rel="stylesheet" href="<?= PATHURL; ?>css/font-awesome.min.css">
         <link rel="stylesheet" href="<?= PATHURL; ?>css/sitio.css">
     </head>
-    <body>
+    <?php
+    require './marcoSuperior.php';
+    ?>
+    <center>
         <div id="titlogin">
             Acceso de usuario.
             <form action="accform/accLogin.php" method="post">
@@ -19,8 +22,14 @@ include 'librerias.php';
                 <div><input name="usuario" type=text></div></br>
                 <div>Clave:</div>
                 <div><input name="clave" type="password"></div></br>
-                <input id="btn" type="submit" value=Acceder>
+                <input id="acceder" type="submit" value="Acceder"></br>   
+            </form>
+            <form action="registroUsuario.php">
+                <input id="registrar" type="submit" value="Registrar">
             </form>
         </div>
-    </body>
+    </center>
+    <?php
+    require './marcoInferior.php';
+    ?>
 </html>

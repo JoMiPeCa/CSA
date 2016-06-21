@@ -65,8 +65,8 @@
                                     cada mes en la dirección de email que nos indiques.</td>
                             </tr>
                             <tr> 
-                                <td height="30"><a href="javascript: function OpenGM(){window.open('http://zmail.zampatroup.com/RWCode/subscribe.asp?SiteID=7253&Mode=subscribe','','top=-200,left=75,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=500,height=350');} OpenGM()" class="linkamarillo">Suscribirme 
-                                        al bolet&iacute;n</a></td>
+                                <td height="30"><a href="redactarCorreo.php">
+                                        Enviar comentario al correo</a></td>
                             </tr>
                         </table></td>
                     <td><img src="images/cuadro_gris_5.gif" width="6" height="500"></td>
