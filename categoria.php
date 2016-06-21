@@ -1,7 +1,4 @@
-<body bgcolor="#D1DBE4" leftmargin="0" topmargin="0" onload="escrolea()">
-    <table width="780" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-            <td align="center" bgcolor="#FFFFFF"> 
+
 
 
         <html>

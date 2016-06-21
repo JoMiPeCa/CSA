@@ -24,7 +24,7 @@
                                     de todas nuestras tiendas </td>
                             </tr>
                             <tr>
-                                <td height="30"><a href="#" target="_blank" class="linkamarillo">-Ver informaci&oacute;n</a><br>
+                                <td height="30"><a href="tiendas.php" target="_blank" class="linkamarillo">-Ver informaci&oacute;n</a><br>
                                     <a href="descargas/tiendas.pdf" target="_blank" class="linkamarillo">-Descargar PDF</a>
                                 </td>
                             </tr>
