@@ -14,10 +14,10 @@
                                     <td>Tel&eacute;fono tienda online: +34 680 60 74 86 </td>
                                 </tr>
                                 <tr>
-                                    <td>Por email: <a href="mailto:ventas@ferreteriaortiz.es" class="linkamarillo">ventas@ferreteriaortiz.es</a> </td>
+                                    <td>Por email: <a href="#" class="linkamarillo">ventas@ferreteriaortiz.es</a> </td>
                                 </tr>
                                 <tr>
-                                    <td>A trav&eacute;s de los tel&eacute;fonos de <a href="address.aspx" target="_blank" class="linkamarillo">Nuestras tiendas</a> </td>
+                                    <td>A trav&eacute;s de los tel&eacute;fonos de <a href="#" target="_blank" class="linkamarillo">Nuestras tiendas</a> </td>
                                 </tr>
                             </table>
                         </td>
@@ -33,13 +33,13 @@
                                     <td><img src="images/pixel_trans.gif" width="1" height="5"></td>
                                 </tr>
                                 <tr>
-                                    <td>Gestionar mis datos: <a href="checkout1.aspx" class="linkamarillo">&Aacute;rea de cliente</a> </td>
+                                    <td>Gestionar mis datos: <a href="#" class="linkamarillo">&Aacute;rea de cliente</a> </td>
                                 </tr>
                                 <tr>
-                                    <td>He olvidado mi contrase&ntilde;a: <a href="checkout1.aspx" class="linkamarillo">Recuperar</a> </td>
+                                    <td>He olvidado mi contrase&ntilde;a: <a href="#" class="linkamarillo">Recuperar</a> </td>
                                 </tr>
                                 <tr>
-                                    <td>Consultar: <a href="generalConditions.aspx" target="_blank" class="linkamarillo">Condiciones generales, cambios y devoluciones </a> </td>
+                                    <td>Consultar: <a href="#" target="_blank" class="linkamarillo">Condiciones generales, cambios y devoluciones </a> </td>
                                 </tr>
                             </table>
                         </td>
