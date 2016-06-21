@@ -2,9 +2,11 @@
 <div align="center">
     <table width="100%"  border="0" cellspacing="0" cellpadding="0">
         <tr>
-            <td width="36%" align="center"><table width="306" height="119"  border="0" cellpadding="0" cellspacing="0" background="images/fondo_datosdecontacto.gif">
+            <td width="50%" align="center">
+                <table width="306" height="119"  border="0" cellpadding="0" cellspacing="0" background="images/fondo_datosdecontacto.gif">
                     <tr>
-                        <td valign="middle"><table width="95%"  border="0" align="center" cellpadding="2" cellspacing="0">
+                        <td valign="middle">
+                            <table width="95%"  border="0" align="center" cellpadding="2" cellspacing="0">
                                 <tr>
                                     <td><img src="images/pixel_trans.gif" width="1" height="5"></td>
                                 </tr>
@@ -17,12 +19,16 @@
                                 <tr>
                                     <td>A trav&eacute;s de los tel&eacute;fonos de <a href="address.aspx" target="_blank" class="linkamarillo">Nuestras tiendas</a> </td>
                                 </tr>
-                            </table></td>
+                            </table>
+                        </td>
                     </tr>
-                </table></td>
-            <td width="37%" align="center"><table width="306" height="119"  border="0" cellpadding="0" cellspacing="0" background="images/fondo_ayuda.gif">
+                </table>
+            </td>
+            <td width="50%" align="center">
+                <table width="306" height="119"  border="0" cellpadding="0" cellspacing="0" background="images/fondo_ayuda.gif">
                     <tr>
-                        <td valign="middle"><table width="95%"  border="0" align="center" cellpadding="2" cellspacing="0">
+                        <td valign="middle">
+                            <table width="95%"  border="0" align="center" cellpadding="2" cellspacing="0">
                                 <tr>
                                     <td><img src="images/pixel_trans.gif" width="1" height="5"></td>
                                 </tr>
@@ -35,10 +41,11 @@
                                 <tr>
                                     <td>Consultar: <a href="generalConditions.aspx" target="_blank" class="linkamarillo">Condiciones generales, cambios y devoluciones </a> </td>
                                 </tr>
-                            </table></td>
+                            </table>
+                        </td>
                     </tr>
-                </table></td>
-
+                </table>
+            </td>
         </tr>
     </table>
     <br>

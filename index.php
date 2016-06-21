@@ -11,13 +11,14 @@
     </head>
     <body bgcolor="#d1dbe4" topmargin="10" text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3>
         <table width="780" border="0" align="center" valign="top" cellpadding="0" cellspacing="0">
-            <tr>
-                <td valign="top" bgcolor="#ffffff">
+            <tr><!-- FILA -->
+                <td valign="top" bgcolor="#ffffff"><!--COLUMNA-->
                     <table width="908" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
                             <td width="12" height="67"><img src="images/izq_sup_degradado.gif" width="12" height="67"></td>
                             <td width="156"><a href="index.php"><img src="images/logo.gif" width="156" height="67" border="0"></A></td>
                             <td height="67" background="images/fondo_sup_degradado.gif">
+                                <!-- CABECERA SECCION CENTRAL-->
                                 <table width="100%" height="67"  border="0" cellpadding="0" cellspacing="0">
                                     <tr valign="bottom">
                                         <td colspan="3">
@@ -34,19 +35,20 @@
                                         <td width="17%" align="center"><a href="#"><img src="images/micesta.gif" alt="Mi cesta" width="110" height="31" border="0"></a></td>
                                     </tr>
                                 </table>
+                                <!-- FIN CABECERA SECCION CENTRAL-->
                             </td>
                             <td width="11" height="67"><img src="images/drch_sup_degradado.gif" width="11" height="67"></td>
                         </tr>
                         <tr bgcolor="#F0F0F0">
-                            <td>&nbsp;	</td>
-                            <td><img src="images/logo_2.gif" width="156" height="26"></td>
+                            <td><!-- NO BORRAR VACIO --></td>
+                            <td><img src="images/logo_2.gif" width="156" height="26"><!-- 1965 --></td>
                             <td>
                                 <table width="98%" border="0" cellspacing="0" cellpadding="2">
                                     <tr>
                                         <td width="12%">
                                             <table width="55" border="0" align="center" cellpadding="0" cellspacing="0">
                                                 <tr>
-                                                    <td><a href="http://www.facebook.com/pages/Ferreteria-Ortiz/330288487021071?ref=ts" target="_blank"><img src="images/facebook.gif" alt="Siguenos en facebook" width="23" height="23" border="0"></a></td>
+                                                    <td><a href="http://www.facebook.com/johny.alboo" target="_blank"><img src="images/facebook.gif" alt="Siguenos en facebook" width="23" height="23" border="0"></a></td>
                                                     <td><a href="http://www.elblogdeferreteriaortiz.es" target="_blank"><img src="images/blog.gif" alt="Siguenos en nuestro blog" width="23" height="23" border="0"></a></td>
                                                 </tr>
                                             </table>
@@ -61,38 +63,44 @@
                                                             <?php
                                                             require ('./accesoRapidoCategorias.php');
                                                             ?>
-                                                        </form>
-                                                        </p>
+                                                        </form> 
                                                     </td>
                                                 </tr>
                                             </table>
                                         </td>
+                                        <td width="24%">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
                                     </tr>
                                 </table>
-                            </td>
+                            </td>            
                             <td>&nbsp;</td>
                         </tr>
                     </table>
-
-                    <!--Base structure-->
                     <div align="center">
                         <table border="0" width="100%" cellspacing="2" cellpadding="0">
                             <tr>
                                 <td bgcolor="#ffffff" width="168" align="left" valign="top">
-                                    <!--/Base structure-->
-                                    <!--FRANJA IZQUIERDA-->
                                     <?php
                                     require 'franjaIzquierda.php';
                                     ?>
-                                    <!--FIN FRANJA IZQUIERDA-->
                                     <br>
                                     <br>
                                     <br>
                                 </td>
-                                <td width="100%" align="left" valign="top">&nbsp;
+                                <td width="100%" align="left" valign="top">&nbsp; </td>
+                                <td bgcolor="#ffffff" width="168" align="left" valign="top">
+                                    <?php require './franjaDerecha.php'; ?>
+                                    <br>
+                                    <br>
+                                    <br>
                                 </td>
                             </tr>
-                        </table>            
+
+                        </table>          
                         <map name="Map">
                             <area shape="rect" coords="127,8,171,25" href="#" alt="Ofertas">
                             <area shape="rect" coords="183,9,256,25" href="#" alt="Novedades">
@@ -100,29 +108,10 @@
                             <area shape="rect" coords="367,9,434,25" href="#" alt="Listado AZ">
                         </map>
 
+                    </div>
                 </td>
-                <!--RIGHT-->
-                <td bgcolor="#ffffff" width="168" align="left" valign="top">
-                    <!--/Base structure-->
-                    <!--FRANJA DERECHA-->
-                    <?php
-                    require './franjaDerecha.php';
-                    ?>
-                    <!--FIN FRANJA DERECHA-->
-                    <br>
-                    <br>
-                    <br>
-                </td>
-
             </tr>
         </table>
-        <!--/Base structure-->
-        <!--BASE-->
         <?php require 'franjaBase.php'; ?>
-        <!--BASE-->
-        <map name="Map">
-            <area shape="circle" coords="434,35,49" href="http://www.ferreteriaortiz.es/store/promo_nespresso.pdf" target="_blank">
-            <area shape="rect" coords="4,2,373,79" href="http://www.ferreteriaortiz.es/store/item.aspx?item_id=0309.0087">
-        </map>
     </body>
 </html>
