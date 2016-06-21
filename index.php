@@ -13,15 +13,12 @@
         <table width="780" border="0" align="center" valign="top" cellpadding="0" cellspacing="0">
             <tr>
                 <td valign="top" bgcolor="#ffffff">
-
-
-
-
                     <table width="908" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
                             <td width="12" height="67"><img src="images/izq_sup_degradado.gif" width="12" height="67"></td>
                             <td width="156"><a href="index.php"><img src="images/logo.gif" width="156" height="67" border="0"></A></td>
-                            <td height="67" background="images/fondo_sup_degradado.gif"><table width="100%" height="67"  border="0" cellpadding="0" cellspacing="0">
+                            <td height="67" background="images/fondo_sup_degradado.gif">
+                                <table width="100%" height="67"  border="0" cellpadding="0" cellspacing="0">
                                     <tr valign="bottom">
                                         <td colspan="3">
                                             <table width="94%"  border="0" align="center" cellpadding="0" cellspacing="0">
@@ -36,7 +33,8 @@
                                         <td width="17%" align="center"><a href="login.php"><img src="images/areadecliente.gif" alt="&Aacute;rea de cliente" width="124" height="31" border="0"></a></td>
                                         <td width="17%" align="center"><a href="#"><img src="images/micesta.gif" alt="Mi cesta" width="110" height="31" border="0"></a></td>
                                     </tr>
-                                </table></td>
+                                </table>
+                            </td>
                             <td width="11" height="67"><img src="images/drch_sup_degradado.gif" width="11" height="67"></td>
                         </tr>
                         <tr bgcolor="#F0F0F0">
@@ -48,7 +46,7 @@
                                         <td width="12%">
                                             <table width="55" border="0" align="center" cellpadding="0" cellspacing="0">
                                                 <tr>
-                                                    <td><a href="http://www.facebook.com/pages/Ferreteria-Ortiz/330288487021071?ref=ts" target="_blank"><img src="images/facebook.gif" alt="Siguenos en facebook" width="23" height="23" border="0"></a></td>
+                                                    <td><a href="http://www.facebook.com/johny.alboo" target="_blank"><img src="images/facebook.gif" alt="Siguenos en facebook" width="23" height="23" border="0"></a></td>
                                                     <td><a href="http://www.elblogdeferreteriaortiz.es" target="_blank"><img src="images/blog.gif" alt="Siguenos en nuestro blog" width="23" height="23" border="0"></a></td>
                                                 </tr>
                                             </table>
@@ -63,18 +61,18 @@
                                                             <?php
                                                             require ('./accesoRapidoCategorias.php');
                                                             ?>
-                                                        </form>
-                                                        </p></td>
+                                                        </form> 
+                                                    </td>
                                                 </tr>
                                             </table>
                                         </td>
                                         <td width="24%">
                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                 <tr>
-                                                <form NAME="find_spec" METHOD="POST" ACTION="category.aspx">
+                                                <form NAME="find_spec" METHOD="POST" ACTION="categoria.php">
                                                     <td width="26%" align="right" valign="middle">buscar:&nbsp;</td>
-                                                    <td width="59%" align="right"><input NAME="find" TYPE="text" SIZE="20,1" MAXLENGTH="50" value=""></td>
-                                                    <td width="15%" align="right"><input name="boton" type="image" src="images/head/ir.gif" width="20" height="18" border=0 value="Buscar"></td>
+                                                    <td width="59%" align="right"><input NAME="find" TYPE="text" SIZE="20,1" MAXLENGTH="50" value=""/></td>
+                                                    <td width="15%" align="right"><input name="boton" type="image" src="images/head/ir.gif" width="20" height="18" border=0 value="Buscar"/></td>
                                                 </form>
                                     </tr>
                                 </table>
@@ -82,71 +80,39 @@
 
                         </tr>
                     </table>
-                </td>
+                </td>            
                 <td>&nbsp;</td>
             </tr>
-        </table>
+        </tr>
 
-        <!--Base structure-->
-        <div align="center">
-            <table border="0" width="100%" cellspacing="2" cellpadding="0">
-                <tr>
-                    <td bgcolor="#ffffff" width="168" align="left" valign="top">
-                        <!--/Base structure-->
-                        <!--FRANJA IZQUIERDA-->
-                        <?php
-                        require 'franjaIzquierda.php';
-                        ?>
-                        <!--FIN FRANJA IZQUIERDA-->
-                        <br>
-                        <br>
-                        <br>
-                    </td>
-                    <td width="100%" align="left" valign="top">&nbsp;
-                        <P>
-
-                            <<<<<<< HEAD
-                            </BODY>
-                        </HTML>	</td>
-                </tr>
-            </table>            
-            <map name="Map">
-                <area shape="rect" coords="127,8,171,25" href="#" alt="Ofertas">
-                <area shape="rect" coords="183,9,256,25" href="#" alt="Novedades">
-                <area shape="rect" coords="265,8,360,25" href="#" alt="Los m&aacute;s vendidos">
-                <area shape="rect" coords="367,9,434,25" href="#" alt="Listado AZ">
-            </map>
-        </td>
-        <!--RIGHT-->
+    </table>
+    <div align="center">
+        <table border="0" width="100%" cellspacing="2" cellpadding="0">
+            <tr>
+                <td bgcolor="#ffffff" width="168" align="left" valign="top">
+                    <?php
+                    require 'franjaIzquierda.php';
+                    ?>
+                    <br>
+                    <br>
+                    <br>
+                </td>
+                <td width="100%" align="left" valign="top">&nbsp; </td>
+            </tr>
+        </table>          
+        <map name="Map">
+            <area shape="rect" coords="127,8,171,25" href="#" alt="Ofertas">
+            <area shape="rect" coords="183,9,256,25" href="#" alt="Novedades">
+            <area shape="rect" coords="265,8,360,25" href="#" alt="Los m&aacute;s vendidos">
+            <area shape="rect" coords="367,9,434,25" href="#" alt="Listado AZ">
+        </map>
         <td bgcolor="#ffffff" width="168" align="left" valign="top">
-            <!--/Base structure-->
-            <!--FRANJA DERECHA-->
-            <?php
-            require './franjaDerecha.php';
-            ?>
-            <!--FIN FRANJA DERECHA-->
+            <?php require './franjaDerecha.php'; ?>
             <br>
             <br>
             <br>
         </td>
-
-    </tr>
-</table>
-</div>
-<!--/Base structure-->
-
-<!--BASE-->
-<?php
-require 'franjaBase.php';
-?>
-<!--BASE-->
-
-
-
-
-<map name="Map">
-    <area shape="circle" coords="434,35,49" href="http://www.ferreteriaortiz.es/store/promo_nespresso.pdf" target="_blank">
-    <area shape="rect" coords="4,2,373,79" href="http://www.ferreteriaortiz.es/store/item.aspx?item_id=0309.0087">
-</map>
+    </div>
+    <?php require 'franjaBase.php'; ?>
 </body>
 </html>
