@@ -23,19 +23,18 @@
                         <td width="156"><a href="index.php"><img src="images/logo.gif" width="156" height="67" border="0"></A></td>
                         <td height="67" background="images/fondo_sup_degradado.gif"><table width="100%" height="67"  border="0" cellpadding="0" cellspacing="0">
                                 <tr valign="bottom">
-                                    <td colspan="3"><table width="94%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <td colspan="3">
+                                        <table width="94%"  border="0" align="center" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="45%"><img src="images/telefono.gif" width="264" height="12" vspace="2"></td>
-                                                <td width="15%" align="center"><a href="descargas/dossiertiendas.pdf" target="_blank" class="linkamarillo">Qui&eacute;nes somos </a></td>
-                                                <td width="16%" align="center"><a href="help.aspx" target="_blank" class="linkamarillo">AYUDA</a></td>
-                                                <td width="24%" align="center"><a href="guide.aspx" class="linkamarillo">&Aacute;rea de profesionales </a></td>
                                             </tr>
-                                        </table></td>
+                                        </table>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td width="66%" align="center"><img src="images/lomasdelcatalogo.gif" width="445" height="31" border="0" usemap="#Map"></td>
-                                    <td width="17%" align="center"><a href="accLogin.php"><img src="images/areadecliente.gif" alt="&Aacute;rea de cliente" width="124" height="31" border="0"></a></td>
-                                    <td width="17%" align="center"><a href="basket.aspx"><img src="images/micesta.gif" alt="Mi cesta" width="110" height="31" border="0"></a></td>
+                                    <td width="17%" align="center"><a href="login.php"><img src="images/areadecliente.gif" alt="&Aacute;rea de cliente" width="124" height="31" border="0"></a></td>
+                                    <td width="17%" align="center"><a href="#"><img src="images/micesta.gif" alt="Mi cesta" width="110" height="31" border="0"></a></td>
                                 </tr>
                             </table></td>
                         <td width="11" height="67"><img src="images/drch_sup_degradado.gif" width="11" height="67"></td>
@@ -55,8 +54,6 @@
                                             <tr>
                                                 <td width="100%" valign="top">
                                                     <p align="LEFT">
-
-
                                                     <form name=deptForm action="http://www.ferreteriaortiz.es/store/category.aspx" method="get" target="_top">
                                                         Acceso rápido a... 
                                                         <?php
