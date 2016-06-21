@@ -24,9 +24,9 @@
                                     de todas nuestras tiendas </td>
                             </tr>
                             <tr>
-                                <td height="30"><a href="address.aspx" target="_blank" class="linkamarillo">- 
-                                        Ver informaci&oacute;n</a><br> <a href="descargas/tiendas.pdf" target="_blank" class="linkamarillo">- 
-                                        Descargar pdf</a></td>
+                                <td height="30"><a href="#" target="_blank" class="linkamarillo">-Ver informaci&oacute;n</a><br>
+                                    <a href="descargas/tiendas.pdf" target="_blank" class="linkamarillo">-Descargar PDF</a>
+                                </td>
                             </tr>
                         </table>
                     </td>
@@ -58,7 +58,7 @@
                                 <td height="8"><img src="images/linea_menu.gif" width="148" height="1"></td>
                             </tr>
                             <tr> 
-                                <td><a href="http://www.ferreteriaortiz.es/store/boletin/2016/junio2016/boletin_junio16.htm" target="_blank"><img src="http://www.ferreteriaortiz.es/store/images/boletin_junio16.jpg" width="148" border="0"></A></td>
+                                <td><a href="images/boletin_junio16.jpg" target="_blank"><img src="images/boletin_junio16.jpg" width="148" border="0"></A></td>
                             </tr>
                             <tr> 
                                 <td height="30">Suscríbete a nuestro boletín y lo recibirás 

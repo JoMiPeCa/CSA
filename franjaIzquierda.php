@@ -6,7 +6,7 @@
                     <td height="100%" align="left" bgcolor="#FFFFFF"> 
                         <table width="156" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
                             <tr> 
-                                <td><a href="defaultferreteria.aspx"><img src="images/menu_ferreteria.gif" width="149" height="23" vspace="0" border="0"></A></td>
+                                <td><a href="#"><img src="images/menu_ferreteria.gif" width="149" height="23" vspace="0" border="0"></A></td>
                             </tr>
                             <tr> 
                                 <td><table width="156" border="0" cellspacing="0" cellpadding="1">
