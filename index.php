@@ -54,7 +54,7 @@
                                             <tr>
                                                 <td width="100%" valign="top">
                                                     <p align="LEFT">
-                                                    <form name=deptForm action="http://www.ferreteriaortiz.es/store/category.aspx" method="get" target="_top">
+                                                    <form name=deptForm action="categoria.php" method="get" target="_top">
                                                         Acceso rápido a... 
                                                         <?php
                                                         require ('./accesoRapidoCategorias.php');
