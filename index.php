@@ -12,8 +12,22 @@
     <?php 
     require './marcoSuperior.php';
     ?>
+    
+    
     <!-- ESCRIBIR AQUI EL CENTRO DE PAGINA -->
-    HOLA JONATHAN
+    <center>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <h4>OFERTAS DESTACADAS DE LA SEMANA</h4>
+    </center>
+    
     
     
     <?php 

@@ -2,7 +2,7 @@
 LEER PAGINA E IMPLEMENTAR CARRO DE COMPRAS
 EL ACTUAL CARRO ES MUY COMPLICADO
 
-https://www.uno-de-piera.com/carrito-de-compras-con-php/
+http://www.desarrolloweb.com/articulos/carro-de-compras-en-php.html
 
 -->
 

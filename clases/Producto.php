@@ -25,6 +25,17 @@ class Producto {
         $this->ndescuento = $ndescuento;
         $this->dterminodescuento = $dterminodescuento;
     }
+    
+    function __construct2($scodigo, $nprecio, $sdescripcion, $subicacion, $ncantidad, $scategoria) {
+        $this->scodigo = $scodigo;
+        $this->nprecio = $nprecio;
+        $this->sdescripcion = $sdescripcion;
+        $this->subicacion = $subicacion;
+        $this->ncantidad = $ncantidad;
+        $this->scategoria = $scategoria;
+        $this->ndescuento = null;
+        $this->dterminodescuento = NULL;
+    }
 
     function getScodigo() {
         return $this->scodigo;
@@ -90,5 +101,28 @@ class Producto {
         $this->dterminodescuento = $dterminodescuento;
     }
 
+    function Selecciona(){
+		
+		if (!$this->querysel){
+		$db=dbconnect();
+		/*Definicion del query que permitira ingresar un nuevo registro*/
+		
+			$sqlsel="select idoferta,descripcion,precio,dias,fechainicio from oferta order by idoferta";
+		
+			/*Preparacion SQL*/
+			$this->querysel=$db->prepare($sqlsel);
+		
+			$this->querysel->execute();
+		}
+		
+		$registro = $this->querysel->fetch();
+		if ($registro){
+			return new self($registro['idoferta'], $registro['descripcion'], $registro['precio'], $registro['dias'], $registro['fechainicio']);			
+		}
+		else {
+			return false;
+			
+		}
+	}
 
 }
