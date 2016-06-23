@@ -20,13 +20,13 @@ include 'librerias.php';
             Acceso de usuario.
             <form action="accform/accLogin.php" method="post">
                 <div>Usuario:</div>
-                <div><input name="usuario" type=text></div></br>
+                <div><input name="usuario" type=text required="true"></div></br>
                 <div>Clave:</div>
-                <div><input name="clave" type="password"></div></br>
+                <div><input name="clave" type="password" required="true"></div></br>
                 <input id="acceder" type="submit" value="Acceder"></br>   
             </form>
             <form action="registroUsuario.php">
-                <input id="registrar" type="submit" value="Registrar">
+                <input id="registro" type="submit" value="Registrar">
             </form>
         </div>
     </center>
