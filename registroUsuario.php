@@ -16,28 +16,67 @@ include 'librerias.php';
     require './marcoSuperior.php';
     ?>
     <center>
-        <div id="titlogin">
-            Registro de usuario.
+        <div id="titlogin"><legend>Registro de usuario.</legend>            
             <table>
                 <form action="accform/accRegistro.php" method="post">
+                    <!-- private $srun;
+                    private $snombre;
+                    private $apellidos;
+                    private $csexo;
+                    private $dfechanacimiento;
+                    private $semail;
+                    private $bSuscripcion;
+                    private $nTelefono;
+                    private $spass;
+                    -->
                     <tr>
-                        <td>Nombre:<input </td>
+                        <td>Nombre:</td>
+                        <td><input name="nombre" id="nombre" type=text required="true"></td>
+                        <td> </td>
                     </tr>
-                    <tr>
+                    <tr>                       
+                        <td>Apellidos:</td>
+                        <td><input name="apellidos" id="apellidos" type="text" required="true"></td>
                         <td> </td>
                     </tr>
                     <tr>
-                        <td> </td>
+                        <td>Género:</td>
+                        <td><select>
+                                <option value="">Seleccione...</option>
+                                <option value="1">Mujer</option>
+                                <option value="2">Hombre</option>
+                            </select></td>
+                        <td></td>
                     </tr>
                     <tr>
+                        <td>Fecha Nacimiento:</td>
+                        <td><input type="date" id="fecha" name="fecha" required="true"></td>
                         <td> </td>
+                    </tr>  
+                    <tr>
+                        <td>Mail:</td>
+                        <td><input type="email" id="correo" name="correo" required="true"></td>
+                        <td> </td>
+                    </tr>  
+                    <tr>
+                        <td>Subscripción:</td>
+                        <td><input type="text" id="subscripcion" name="subscripcion" required="true"></td>
+                        <td> </td>
+                    </tr>  
+                    <tr>
+                        <td>Teléfono:</td>
+                        <td><input type="number" id="telefono" name="telefono" required="true"></td>
+                        <td> </td>
+                    </tr>  
+                    <tr>
+                        <td>Contraseña:</td>
+                        <td><input type="text" id="contraseña" name="contraseña" required="true"></td>
+                        <td> </td>
+                    </tr>  
+                    <tr>
+                        <td></td>  
+                        <td><input id="registrar" type="submit" value="Registrar"></td>
                     </tr>
-                    <div>Nombre:</div>
-                    <div><input name="nombre" id="nombre" type=text required="true"></div></br>
-                    <div>Apellidos:</div>
-                    <div><input name="apellidos" id="apellidos" type="text" required="true"></div></br>
-                    
-                    <input id="registrar" type="submit" value="Acceder"></br>   
                 </form>
             </table>
         </div>
