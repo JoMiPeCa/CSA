@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Description of Producto
  *
  * @author Jonathan Espinoza
  */
 class Producto {
-    
+
     private $scodigo;
     private $nprecio;
     private $sdescripcion;
@@ -14,7 +15,7 @@ class Producto {
     private $scategoria;
     private $ndescuento;
     private $dterminodescuento;
-    
+
     function __construct($scodigo, $nprecio, $sdescripcion, $subicacion, $ncantidad, $scategoria, $ndescuento, $dterminodescuento) {
         $this->scodigo = $scodigo;
         $this->nprecio = $nprecio;
@@ -25,7 +26,7 @@ class Producto {
         $this->ndescuento = $ndescuento;
         $this->dterminodescuento = $dterminodescuento;
     }
-    
+
     function __construct2($scodigo, $nprecio, $sdescripcion, $subicacion, $ncantidad, $scategoria) {
         $this->scodigo = $scodigo;
         $this->nprecio = $nprecio;
@@ -101,28 +102,35 @@ class Producto {
         $this->dterminodescuento = $dterminodescuento;
     }
 
-    function Selecciona(){
-		
-		if (!$this->querysel){
-		$db=dbconnect();
-		/*Definicion del query que permitira ingresar un nuevo registro*/
-		
-			$sqlsel="select idoferta,descripcion,precio,dias,fechainicio from oferta order by idoferta";
-		
-			/*Preparacion SQL*/
-			$this->querysel=$db->prepare($sqlsel);
-		
-			$this->querysel->execute();
-		}
-		
-		$registro = $this->querysel->fetch();
-		if ($registro){
-			return new self($registro['idoferta'], $registro['descripcion'], $registro['precio'], $registro['dias'], $registro['fechainicio']);			
-		}
-		else {
-			return false;
-			
-		}
-	}
+    function Selecciona() {
+
+        if (!$this->querysel) {
+            $db = dbconnect();
+            /* Definicion del query que permitira ingresar un nuevo registro */
+            /*
+              private $scodigo;
+              private $nprecio;
+              private $sdescripcion;
+              private $subicacion;
+              private $ncantidad;
+              private $scategoria;
+              private $ndescuento;
+              private $dterminodescuento;
+             */
+            $sqlsel = "select idoferta,descripcion,precio,dias,fechainicio from oferta order by idoferta";
+
+            /* Preparacion SQL */
+            $this->querysel = $db->prepare($sqlsel);
+
+            $this->querysel->execute();
+        }
+
+        $registro = $this->querysel->fetch();
+        if ($registro) {
+            return new self($registro['idoferta'], $registro['descripcion'], $registro['precio'], $registro['dias'], $registro['fechainicio']);
+        } else {
+            return false;
+        }
+    }
 
 }
