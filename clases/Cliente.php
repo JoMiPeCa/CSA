@@ -17,7 +17,7 @@ class Cliente {
     private $nTelefono;
     private $spass;
 
-    function __construct($srun, $snombre, $apellidos, $csexo, $dfechanacimiento, $semail, $bSuscripcion, $nTelefono, $spass) {
+    function __construct($srun = NULL, $snombre = NULL, $apellidos = NULL, $csexo = NULL, $dfechanacimiento = NULL, $semail = NULL, $bSuscripcion = NULL, $nTelefono = NULL, $spass = NULL) {
         $this->srun = $srun;
         $this->snombre = $snombre;
         $this->apellidos = $apellidos;

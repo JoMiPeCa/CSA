@@ -57,10 +57,10 @@ $usr = new Cliente();
                 </tr>  
                 <tr>
                     <td>Contraseña:</td>
-                    <td><input type="password" id="pass" name="pass" required="true"></td>
+                    <td><input type="password" id="contraseña" name="contraseña" required="true"></td>
                     <td> </td>
                     <td>Repita Contraseña:</td>
-                    <td><input type="password" id="pass" name="pass" required="true"></td>
+                    <td><input type="password" id="contraseña" name="contraseña" required="true"></td>
                     <td> </td>
                 </tr>  
                 <tr>

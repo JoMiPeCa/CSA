@@ -16,7 +16,7 @@ include 'librerias.php';
     require './marcoSuperior.php';
     ?>
     <?php
-    require '../form/form_registro.php';
+    require './form/form_registro.php';
     ?>
     <?php
     require './marcoInferior.php';
