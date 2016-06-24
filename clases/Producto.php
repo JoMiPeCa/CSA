@@ -6,48 +6,49 @@
  * @author Jonathan Espinoza
  */
 class Producto {
-
-    private $scodigo;
-    private $nprecio;
-    private $sdescripcion;
+    
+    private $nidProducto;
+    private $snombreProducto;
+    private $scategoria;
+    private $nprecioUnitario;
+    private $sdescripcionProducto;
     private $subicacion;
     private $ncantidad;
-    private $scategoria;
-    private $ndescuento;
-    private $dterminodescuento;
+    private $ldsto;
+    private $dfechaTerminoDsto;
+    private $querysel;
 
-    function __construct($scodigo, $nprecio, $sdescripcion, $subicacion, $ncantidad, $scategoria, $ndescuento, $dterminodescuento) {
-        $this->scodigo = $scodigo;
-        $this->nprecio = $nprecio;
-        $this->sdescripcion = $sdescripcion;
-        $this->subicacion = $subicacion;
-        $this->ncantidad = $ncantidad;
-        $this->scategoria = $scategoria;
-        $this->ndescuento = $ndescuento;
-        $this->dterminodescuento = $dterminodescuento;
+    function __construct($nidProducto=NULL,$snombreProducto=NULL,$scategoria=NULL,$nprecioUnitario=NULL,$sdescripcionProducto=NULL,$subicacion=NULL,$ncantidad=NULL,$ldsto=NULL,$dfechaTerminoDsto=NULL){
+		$this->nidProducto=$nidProducto;
+		$this->snombreProducto=$snombreProducto;
+		$this->scategoria=$scategoria;
+		$this->nprecioUnitario=$nprecioUnitario;
+		$this->sdescripcionProducto=$sdescripcionProducto;
+		$this->subicacion=$subicacion;
+		$this->ncantidad=$ncantidad;
+		$this->ldsto=$ldsto;
+		$this->dfechaTerminoDsto=$dfechaTerminoDsto;
+		
+	}
+        
+    function getNidProducto() {
+        return $this->nidProducto;
     }
 
-    function __construct2($scodigo, $nprecio, $sdescripcion, $subicacion, $ncantidad, $scategoria) {
-        $this->scodigo = $scodigo;
-        $this->nprecio = $nprecio;
-        $this->sdescripcion = $sdescripcion;
-        $this->subicacion = $subicacion;
-        $this->ncantidad = $ncantidad;
-        $this->scategoria = $scategoria;
-        $this->ndescuento = null;
-        $this->dterminodescuento = NULL;
+    function getSnombreProducto() {
+        return $this->snombreProducto;
     }
 
-    function getScodigo() {
-        return $this->scodigo;
+    function getScategoria() {
+        return $this->scategoria;
     }
 
-    function getNprecio() {
-        return $this->nprecio;
+    function getNprecioUnitario() {
+        return $this->nprecioUnitario;
     }
 
-    function getSdescripcion() {
-        return $this->sdescripcion;
+    function getSdescripcionProducto() {
+        return $this->sdescripcionProducto;
     }
 
     function getSubicacion() {
@@ -58,28 +59,32 @@ class Producto {
         return $this->ncantidad;
     }
 
-    function getScategoria() {
-        return $this->scategoria;
+    function getLdescuento() {
+        return $this->ldsto;
     }
 
-    function getNdescuento() {
-        return $this->ndescuento;
+    function getDfechaTerminoDsto() {
+        return $this->dfechaTerminoDsto;
     }
 
-    function getDterminodescuento() {
-        return $this->dterminodescuento;
+    function setNidProducto($nidProducto) {
+        $this->nidProducto = $nidProducto;
     }
 
-    function setScodigo($scodigo) {
-        $this->scodigo = $scodigo;
+    function setSnombreProducto($snombreProducto) {
+        $this->snombreProducto = $snombreProducto;
     }
 
-    function setNprecio($nprecio) {
-        $this->nprecio = $nprecio;
+    function setScategoria($scategoria) {
+        $this->scategoria = $scategoria;
     }
 
-    function setSdescripcion($sdescripcion) {
-        $this->sdescripcion = $sdescripcion;
+    function setNprecioUnitario($nprecioUnitario) {
+        $this->nprecioUnitario = $nprecioUnitario;
+    }
+
+    function setSdescripcionProducto($sdescripcionProducto) {
+        $this->sdescripcionProducto = $sdescripcionProducto;
     }
 
     function setSubicacion($subicacion) {
@@ -90,34 +95,22 @@ class Producto {
         $this->ncantidad = $ncantidad;
     }
 
-    function setScategoria($scategoria) {
-        $this->scategoria = $scategoria;
+    function setLdescuento($ldescuento) {
+        $this->ldsto = $ldescuento;
     }
 
-    function setNdescuento($ndescuento) {
-        $this->ndescuento = $ndescuento;
+    function setDfechaTerminoDsto($dfechaTerminoDsto) {
+        $this->dfechaTerminoDsto = $dfechaTerminoDsto;
     }
 
-    function setDterminodescuento($dterminodescuento) {
-        $this->dterminodescuento = $dterminodescuento;
-    }
-
+    
     function Selecciona() {
 
         if (!$this->querysel) {
             $db = dbconnect();
             /* Definicion del query que permitira ingresar un nuevo registro */
-            /*
-              private $scodigo;
-              private $nprecio;
-              private $sdescripcion;
-              private $subicacion;
-              private $ncantidad;
-              private $scategoria;
-              private $ndescuento;
-              private $dterminodescuento;
-             */
-            $sqlsel = "select idoferta,descripcion,precio,dias,fechainicio from oferta order by idoferta";
+            
+            $sqlsel = "select idProducto,nombreProducto,categoria,precioUnitario,descripcionProducto,ubicacion,cantidad,dsto,fechaTerminoDsto from producto order by idProducto";
 
             /* Preparacion SQL */
             $this->querysel = $db->prepare($sqlsel);
@@ -127,7 +120,7 @@ class Producto {
 
         $registro = $this->querysel->fetch();
         if ($registro) {
-            return new self($registro['idoferta'], $registro['descripcion'], $registro['precio'], $registro['dias'], $registro['fechainicio']);
+            return new self($registro['idProducto'], $registro['nombreProducto'], $registro['categoria'], $registro['precioUnitario'], $registro['descripcionProducto'], $registro['ubicacion'], $registro['cantidad'], $registro['dsto'], $registro['fechaTerminoDsto']);
         } else {
             return false;
         }

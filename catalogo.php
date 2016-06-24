@@ -1,5 +1,4 @@
-<?php 
-ob_start("ob_gzhandler"); ?>
+<?php ob_start("ob_gzhandler"); ?>
 <html>
     <head>
         <TITLE>Ferreteria Ortiz - Ferretería Ortiz</TITLE>
@@ -11,11 +10,11 @@ ob_start("ob_gzhandler"); ?>
         <META id="_TopLeft_metaRobots" NAME="Robots" content="All"></META>
         <link href="css/ie.css" rel="stylesheet" type="text/css">
     </head>
-    <?php 
+    <?php
     require './marcoSuperior.php';
     ?>
 
-<?php
+    <?php
 //Las funciones ob_start y
 //ob_end_flush te permiten
 //escojer en qué momento
@@ -30,68 +29,64 @@ ob_start("ob_gzhandler"); ?>
 //conectamos a la base de
 //datos
     require './librerias.php';
-//rescatamos los valores
-//guardados en la variable de
-//sesión (si es que hay alguno,
-// cosa que comprobamos con isset)
-//y los asignamos a $carro.
-//Si no existen valores, ponemos a false
-//el valor de $carro
-if(isset($_SESSION['carro']))
-$carro=$_SESSION['carro'];else $carro=false;
-//y hacemos la consulta
-$qry=mysql_query("select * from producto order by idProducto asc");
-?>
-<table width="272" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #000000;">
-<tr valign="middle" bordercolor="#FFFFFF" bgcolor="#DFDFDF" class="catalogo"> 
-<td width="170"><strong>Producto</strong></td>
-<td width="77"><strong>Precio</strong></td>
-<td width="25" align="right"><a href="carroCompra.php?<?php echo SID ?>" title="Ver el contenido del carrito">
-<img src="vercarrito.gif" width="25" height="21" border="0"></a></td>
-</tr>
-<?php
-//mostramos todos nuestros
-//artículos, viendo si han
-//sido agregados o no a nuestro
-//carro de compra
-while($row=mysql_fetch_assoc($qry)){
-?>
-<tr valign="middle" class="catalogo"> 
-<td><?php echo $row['producto'] ?></td>
-<td><?php echo $row['precio'] ?></td>
-<td align="center">
-<?php
-if(!$carro || !isset($carro[md5($row['id'])]['identificador']) || $carro[md5($row['id'])]['identificador']!=md5($row['id'])){
-//si el producto no ha sido
-//agregado, mostramos la imagen
-//de no agregado, linkeada
-//a nuestra página de agregar
-//producto y transmitíéndole a
-//dicha página el id del artículo
-//y el identificador de la sesión
-?>
-<a href="agregacar.php?<?php echo SID ?>&id=<?php echo $row['id']; ?>">
-<img src="productonoagregado.gif" border="0" title="Agregar al Carrito"></a><?php }else
-//en caso contrario mostramos la
-//otra imagen linkeada., a la
-//página que sirve para borrar el
-//artículo del carro.
-{?><a href="borracar.php?<?php echo SID ?>&id=<?php echo $row['id']; ?>">
-<img src="productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php } ?></td>
-</tr><?php } ?>
-</table>
 
-    
+    if (isset($_SESSION['carro']))
+        $carro = $_SESSION['carro'];
+    else
+        $carro = false;
+        $oProducto = new Producto();
+    ?>
+    <table width="100%" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #000000;">
+        <tr valign="middle" bordercolor="#FFFFFF" bgcolor="#DFDFDF" class="catalogo"> 
+            <td width="170"><strong>Codigo</strong></td>
+            <td width="270"><strong>Nombre</strong></td>
+            <td width="170"><strong>Categoria</strong></td>
+            <td width="77"><strong>Precio</strong></td>
+            <td width="457"><strong>Descripcion</strong></td>
+            <td width="127"><strong>Ubicacion</strong></td>
+            <td width="50"><strong>Cantidad</strong></td>
+            <td width="50"><strong>Descuento</strong></td>
+            <td width="80"><strong>Hasta (Descuento)</strong></td>
+            <td width="25" align="right"><a href="carroCompra.php?<?php echo SID ?>" title="Ver el contenido del carrito">
+                    <img src="./images/vercarrito.gif" width="25" height="21" border="0"></a></td>
+        </tr>
+        <?php
+        while ($row=$oProducto->Selecciona()) {
+            ?>
+            <tr valign="middle" class="catalogo">
+                <?php $row = get_object_vars($row); ?>
+                <td><?php echo $row['idProducto'] ?></td>
+                <td><?php echo $row['nombreProducto'] ?></td>
+                <td><?php echo $row['categoria'] ?></td>
+                <td><?php echo $row['precioUnitario'] ?></td>
+                <td><?php echo $row['descripcionProducto'] ?></td>
+                <td><?php echo $row['ubicacion'] ?></td>
+                <td><?php echo $row['cantidad'] ?></td>
+                <td><?php echo $row['dsto'] ?></td>
+                <td><?php echo $row['fechaTerminoDsto'] ?></td>
+                <td align="center">
+                    <?php
+                    if (!$carro || !isset($carro[md5($row['idProducto'])]['identificador']) || $carro[md5($row['idProducto'])]['identificador'] != md5($row['idProducto'])) {
+                        ?>
+                        <a href="./cesta/addCart.php?<?php echo SID ?>&id=<?php echo $row['id']; ?>">
+                            <img src="./images/productonoagregado.gif" border="0" title="Agregar al Carrito"></a><?php
+                    } else {
+                        ?><a href="./cesta/delCart.php?<?php echo SID ?>&id=<?php echo $row['id']; ?>">
+                            <img src="./images/productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php } ?></td>
+            </tr><?php } ?>
+    </table>
 
-    
-    
-    
-    <?php 
+
+
+
+
+
+    <?php
     require './marcoInferior.php';
     ?>
-    
+
 </html>
 
-<?php 
+<?php
 ob_end_flush();
 ?>
