@@ -13,6 +13,9 @@ if (isset($_SESSION['carro']))
 else
     $carro = false;
 ?>
+<?php 
+$cCarro = new CarritoCompras();
+?>
 <html>
     <head>
         <title>Carro de Compras</title>
