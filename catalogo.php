@@ -47,7 +47,7 @@ $oProducto = new Producto();
             ?>
             <tr valign="middle" class="catalogo">
                 <?php $row = get_object_vars($row); ?>
-                <td><?php echo $row['idProducto'] ?></td>
+                <td><? $row->IdProducto() ?></td>
                 <td><?php echo $row['nombreProducto'] ?></td>
                 <td><?php echo $row['categoria'] ?></td>
                 <td><?php echo $row['precioUnitario'] ?></td>
