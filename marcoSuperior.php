@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <body bgcolor="#d1dbe4" topmargin="10" text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3>
     <table width="780" border="0" align="center" valign="top" cellpadding="0" cellspacing="0">
         <tr><!-- FILA -->
