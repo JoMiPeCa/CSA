@@ -17,13 +17,13 @@ USE `ferreteriaweb`;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ferreteriaweb`.`Usuario` (
   `runUsuario` VARCHAR(13) NOT NULL COMMENT 'Rol Unico Nacional del Cliente',
-  `nombre` VARCHAR(30) NOT NULL,
-  `apellido` VARCHAR(30) NOT NULL,
+  `nombre` VARCHAR(50) NOT NULL,
+  `apellido` VARCHAR(50) NOT NULL,
   `sexo` VARCHAR(7) NOT NULL,
   `fechaNacimiento` DATE NOT NULL,
   `telefono` INT NOT NULL,
-  `email` VARCHAR(40) NOT NULL,
-  `suscripcion` TINYINT(1) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `suscripcion` BOOLEAN NOT NULL,
   `pass` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`runUsuario`))
 ENGINE = InnoDB;
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `ferreteriaweb`.`Producto` (
   `nombreProducto` VARCHAR(30) NOT NULL,
   `categoria` VARCHAR(30) NOT NULL,
   `precioUnitario` INT NOT NULL,
-  `descripcionProducto` VARCHAR(30) NOT NULL,
+  `descripcionProducto` VARCHAR(1024) NOT NULL,
   `ubicacion` VARCHAR(30) NOT NULL,
   `cantidad` INT NOT NULL,
   `dsto` DOUBLE NULL,
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `ferreteriaweb`.`Boleta` (
   `total` INT NOT NULL,
   `tipoTransaccion` VARCHAR(30) NOT NULL,
   `nroOrden` INT NOT NULL,
-  `Usuario_runUsuario` VARCHAR(30) NOT NULL,
+  `Usuario_runUsuario` VARCHAR(13) NOT NULL,
   `carritoCompra_idcarritoCompra` INT NOT NULL,
   PRIMARY KEY (`numBoleta`, `carritoCompra_idcarritoCompra`),
   INDEX `fk_Boleta_Usuario1_idx` (`Usuario_runUsuario` ASC),
@@ -113,10 +113,10 @@ ENGINE = InnoDB;
 -- Table `ferreteriaweb`.`Administrador`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ferreteriaweb`.`Administrador` (
-  `runUsuario` VARCHAR(30) NOT NULL COMMENT 'Rol Unico Nacional del Cliente',
+  `runUsuario` VARCHAR(13) NOT NULL COMMENT 'Rol Unico Nacional del Administrador',
   `nombre` VARCHAR(30) NOT NULL,
   `apellido` VARCHAR(30) NOT NULL,
-  `sexo` VARCHAR(30) NOT NULL,
+  `sexo` VARCHAR(7) NOT NULL,
   `fechaNacimiento` DATE NOT NULL,
   `email` VARCHAR(30) NOT NULL,
   `userName` VARCHAR(30) NOT NULL,
@@ -168,3 +168,4 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+

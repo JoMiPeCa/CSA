@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <body bgcolor="#d1dbe4" topmargin="10" text=#000000 vLink=#0069b3 aLink=#ff0000 link=#0069b3>
     <table width="780" border="0" align="center" valign="top" cellpadding="0" cellspacing="0">
         <tr><!-- FILA -->
@@ -24,7 +21,7 @@ session_start();
                                 <tr>
                                     <td width="66%" align="center"><img src="images/lomasdelcatalogo.gif" width="445" height="31" border="0" usemap="#Map"></td>
                                     <td width="17%" align="center"><a href="login.php"><img src="images/areadecliente.gif" alt="&Aacute;rea de cliente" width="124" height="31" border="0"></a></td>
-                                    <td width="17%" align="center"><a href="#"><img src="images/micesta.gif" alt="Mi cesta" width="110" height="31" border="0"></a></td>
+                                    <td width="17%" align="center"><a href="carroCompra.php"><img src="images/micesta.gif" alt="Mi cesta" width="110" height="31" border="0"></a></td>
                                 </tr>
                             </table>
                             <!-- FIN CABECERA SECCION CENTRAL-->

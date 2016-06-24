@@ -1,4 +1,4 @@
-    <?php 
+<?php 
 ob_start("ob_gzhandler"); ?>
 <html>
     <head>
@@ -14,7 +14,7 @@ ob_start("ob_gzhandler"); ?>
     <?php 
     require './marcoSuperior.php';
     ?>
-    
+
 <?php
 //Las funciones ob_start y
 //ob_end_flush te permiten
@@ -29,8 +29,7 @@ ob_start("ob_gzhandler"); ?>
 //session_start();
 //conectamos a la base de
 //datos
-mysql_connect("localhost","usuario","password");
-mysql_select_db("db");
+    require './librerias.php';
 //rescatamos los valores
 //guardados en la variable de
 //sesión (si es que hay alguno,
@@ -47,7 +46,7 @@ $qry=mysql_query("select * from producto order by idProducto asc");
 <tr valign="middle" bordercolor="#FFFFFF" bgcolor="#DFDFDF" class="catalogo"> 
 <td width="170"><strong>Producto</strong></td>
 <td width="77"><strong>Precio</strong></td>
-<td width="25" align="right"><a href="vercarrito.php?<?php echo SID ?>" title="Ver el contenido del carrito">
+<td width="25" align="right"><a href="carroCompra.php?<?php echo SID ?>" title="Ver el contenido del carrito">
 <img src="vercarrito.gif" width="25" height="21" border="0"></a></td>
 </tr>
 <?php
@@ -83,19 +82,7 @@ if(!$carro || !isset($carro[md5($row['id'])]['identificador']) || $carro[md5($ro
 </table>
 
     
-    <!-- ESCRIBIR AQUI EL CENTRO DE PAGINA -->
-    <center>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        
-        <h4>CATALOGO</h4>
-    </center>
+
     
     
     
@@ -105,3 +92,6 @@ if(!$carro || !isset($carro[md5($row['id'])]['identificador']) || $carro[md5($ro
     
 </html>
 
+<?php 
+ob_end_flush();
+?>
