@@ -10,6 +10,7 @@ session_start();
 
 <?php
 if (!isset($_SESSION["oUsuario"])) {
+    $carro = false;
     ?>
 
     }
@@ -18,7 +19,8 @@ if (!isset($_SESSION["oUsuario"])) {
     </script>
     <?php
 } else {
-    $oUsr = $_SESSION["oUsuario"];
+    $usr = $_SESSION["oUsuario"];
+    $carro = true;
 }
 ?>
 
