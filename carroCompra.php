@@ -8,6 +8,9 @@ http://www.desarrolloweb.com/articulos/carro-de-compras-en-php.html
 
 <?php
 session_start();
+require './librerias.php';
+
+
 if (isset($_SESSION['carro']))
     $carro = $_SESSION['carro'];
 else
@@ -40,19 +43,7 @@ $cCarro = new CarritoCompras();
             <?php
             $color = array("#ffffff", "#F0F0F0");
             $contador = 0;
-//las 2 líneas anteriores
-//sirven sólo para hacer
-//una tabla con colores 
-//alternos
             $suma = 0;
-//antes de recorrer todos
-//los valores de la matriz
-//$carro, ponemos a cero la
-//variable $suma, en la que
-//iremos sumando los subtotales
-//del costo de cada item por la
-//cantidad de unidades que se
-//especifiquen 
             foreach ($carro as $k => $v) {
 //recorremos la matriz que tiene
 //todos los valores del carro, 
@@ -64,7 +55,7 @@ $cCarro = new CarritoCompras();
 //este es el contador que usamos
 //para los colores alternos 
                 ?>
-            <form name="a<?php echo $v['identificador'] ?>" method="post" action="./cesta/addCart.php?<?php echo SID ?>" id="a<?php echo $v['identificador'] ?>">
+            <form name="a<?php echo $v['identificador'] ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v['identificador'] ?>">
                     <tr bgcolor="<?php echo $color[$contador % 2]; ?>" class='prod'> 
                         <td><?php echo $v['producto'] ?></td>
                         <td><?php echo $v['precio'] ?></td>
@@ -72,9 +63,9 @@ $cCarro = new CarritoCompras();
                         <td width="136" align="center"> 
                             <input name="cantidad" type="text" id="cantidad" value="<?php echo $v['cantidad'] ?>" size="8">
                             <input name="id" type="hidden" id="id" value="<?php echo $v['id'] ?>"> </td>
-                        <td align="center"><a href="./cesta/delCart.php?<?php echo SID ?>&id=<?php echo $v['id'] ?>"><img src="trash.gif" width="12" height="14" border="0"></a></td>
+                        <td align="center"><a href="delCart.php?<?php echo SID ?>&id=<?php echo $v['id'] ?>"><img src="trash.gif" width="12" height="14" border="0"></a></td>
                         <td align="center"> 
-                            <input name="imageField" type="image" src="actualizar.gif" width="20" height="20" border="0"></td>
+                            <input name="imageField" type="image" src="images/actualizar.gif" width="20" height="20" border="0"></td>
                     </tr></form>
                 <?php
 //por cada item creamos un

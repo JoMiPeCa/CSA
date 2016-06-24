@@ -73,8 +73,8 @@ CREATE TABLE `boleta` (
 --
 
 CREATE TABLE `carritocompra` (
-  `idcarritoCompra` int(11) NOT NULL,
-  `idproducto` int(11) NOT NULL,
+  `idCarritoCompra` int(11) NOT NULL,
+  `idProducto` int(11) NOT NULL,
   `dscto` double NOT NULL,
   `total` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,

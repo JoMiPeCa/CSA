@@ -2,14 +2,16 @@
 session_start();
 extract($_REQUEST);
 
-require '../lib/db_funciones.php';
+require './lib/db_funciones.php';
 
 $db = dbconnect();
 
 if(!isset($cantidad)){$cantidad=1;}
-$qry=mysql_query("select * from carritocompra where 
-producto='".$id."'");
-$row=mysql_fetch_array($qry);
+$qry="select * from carritocompra where 
+idProducto='".$id."'";
+$exe = $db->prepare($qry);
+$exe->execute();
+$row=$exe->fetch();
 if(isset($_SESSION['carro']))
 $carro=$_SESSION['carro'];
 $carro[md5($id)]=array('idProducto'=>md5($id),

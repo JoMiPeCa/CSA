@@ -50,7 +50,7 @@
                                                     <form name=deptForm action="categoria.php" method="get" target="_top">
                                                         Acceso rápido a... 
                                                         <?php
-                                                        require ('./accesoRapidoCategorias.php');
+                                                        require ('accesoRapidoCategorias.php');
                                                         ?>
                                                     </form> 
                                                 </td>

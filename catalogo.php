@@ -1,7 +1,7 @@
 <?php
 ob_start("ob_gzhandler");
 
-require './librerias.php';
+require 'librerias.php';
 
 
 
@@ -25,7 +25,7 @@ $oProducto = new Producto();
         <link href="css/ie.css" rel="stylesheet" type="text/css">
     </head>
     <?php
-    require './marcoSuperior.php';
+    require 'marcoSuperior.php';
     ?>
 
 
@@ -41,7 +41,7 @@ $oProducto = new Producto();
             <td width="50"><strong>Descuento</strong></td>
             <td width="80"><strong>Hasta (Descuento)</strong></td>
             <td width="25" align="right"><a href="carroCompra.php?<?php echo SID ?>" title="Ver el contenido del carrito">
-                    <img src="./images/vercarrito.gif" width="25" height="21" border="0"></a></td>
+                    <img src="images/vercarrito.gif" width="25" height="21" border="0"></a></td>
         </tr>
         <?php
         while ($row = $oProducto->Selecciona()) {
@@ -60,16 +60,16 @@ $oProducto = new Producto();
                     <?php
                     if (!$carro || !isset($carro[md5($row->getNidProducto())]['identificador']) || $carro[md5($row->getNidProducto())]['identificador'] != md5($row->getNidProducto())) {
                         ?>
-                        <a href="./cesta/addCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
-                            <img src="./images/productonoagregado.gif" border="0" title="Agregar al Carrito"></a><?php
+                        <a href="addCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
+                            <img src="images/productonoagregado.gif" border="0" title="Agregar al Carrito"></a><?php
                     } else {
-                        ?><a href="./cesta/delCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
-                            <img src="./images/productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php } ?></td>
+                        ?><a href="delCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
+                            <img src="images/productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php } ?></td>
             </tr><?php } ?>
     </table>
 
     <?php
-    require './marcoInferior.php';
+    require 'marcoInferior.php';
     ?>
 
 </html>
