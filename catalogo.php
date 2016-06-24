@@ -46,16 +46,15 @@ $oProducto = new Producto();
         while ($row = $oProducto->Selecciona()) {
             ?>
             <tr valign="middle" class="catalogo">
-                <?php $row = get_object_vars($row); ?>
-                <td><? $row->IdProducto() ?></td>
-                <td><?php echo $row['nombreProducto'] ?></td>
-                <td><?php echo $row['categoria'] ?></td>
-                <td><?php echo $row['precioUnitario'] ?></td>
-                <td><?php echo $row['descripcionProducto'] ?></td>
-                <td><?php echo $row['ubicacion'] ?></td>
-                <td><?php echo $row['cantidad'] ?></td>
-                <td><?php echo $row['dsto'] ?></td>
-                <td><?php echo $row['fechaTerminoDsto'] ?></td>
+                <td><?= $row->getNidProducto() ?></td>
+                <td><?= $row->getSnombreProducto() ?></td>
+                <td><?= $row->getScategoria() ?></td>
+                <td><?= $row->getNprecioUnitario() ?></td>
+                <td><?= $row->getSdescripcionProducto() ?></td>
+                <td><?= $row->getSubicacion() ?></td>
+                <td><?= $row->getNcantidad() ?></td>
+                <td><?= $row->getLdescuento() ?></td>
+                <td><?= $row->getDfechaTerminoDsto() ?></td>
                 <td align="center">
                     <?php
                     if (!$carro || !isset($carro[md5($row['idProducto'])]['identificador']) || $carro[md5($row['idProducto'])]['identificador'] != md5($row['idProducto'])) {
