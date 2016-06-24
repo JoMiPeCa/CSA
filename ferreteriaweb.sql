@@ -74,8 +74,8 @@ CREATE TABLE `boleta` (
 
 CREATE TABLE `carritocompra` (
   `idcarritoCompra` int(11) NOT NULL,
-  `producto` int(11) NOT NULL,
-  `dscto` int(11) NOT NULL,
+  `idproducto` int(11) NOT NULL,
+  `dscto` double NOT NULL,
   `total` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `montoPagar` int(11) NOT NULL,
