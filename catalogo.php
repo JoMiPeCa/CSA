@@ -1,4 +1,17 @@
-<?php ob_start("ob_gzhandler"); ?>
+<?php
+ob_start("ob_gzhandler");
+
+require './librerias.php';
+
+
+
+if (isset($_SESSION['carro'])) {
+    $carro = $_SESSION['carro'];
+} else {
+    $carro = false;
+}
+$oProducto = new Producto();
+?>
 <html>
     <head>
         <TITLE>Ferreteria Ortiz - Ferretería Ortiz</TITLE>
@@ -14,28 +27,7 @@
     require './marcoSuperior.php';
     ?>
 
-    <?php
-//Las funciones ob_start y
-//ob_end_flush te permiten
-//escojer en qué momento
-//enviar el resultado de un
-//script al navegador. Si
-//no las utilizamos estamos
-//obligados a que nuestra 
-//primera línea de código
-//sea session_start() u
-//obtendremos un error
-//session_start();
-//conectamos a la base de
-//datos
-    require './librerias.php';
 
-    if (isset($_SESSION['carro']))
-        $carro = $_SESSION['carro'];
-    else
-        $carro = false;
-        $oProducto = new Producto();
-    ?>
     <table width="100%" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #000000;">
         <tr valign="middle" bordercolor="#FFFFFF" bgcolor="#DFDFDF" class="catalogo"> 
             <td width="170"><strong>Codigo</strong></td>
@@ -51,7 +43,7 @@
                     <img src="./images/vercarrito.gif" width="25" height="21" border="0"></a></td>
         </tr>
         <?php
-        while ($row=$oProducto->Selecciona()) {
+        while ($row = $oProducto->Selecciona()) {
             ?>
             <tr valign="middle" class="catalogo">
                 <?php $row = get_object_vars($row); ?>
@@ -75,11 +67,6 @@
                             <img src="./images/productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php } ?></td>
             </tr><?php } ?>
     </table>
-
-
-
-
-
 
     <?php
     require './marcoInferior.php';
