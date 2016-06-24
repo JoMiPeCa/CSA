@@ -17,7 +17,7 @@ else
     <head>
         <title>Carro de Compras</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-        <link href="css/cc.css" rel="stylesheet" type="text/css">
+        <link href="css/ie.css" rel="stylesheet" type="text/css">
     </head>
     <?php
     require './marcoSuperior.php';

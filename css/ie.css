@@ -249,3 +249,20 @@ A.linkazul:hover {
 	color:#666666;
 	text-decoration: none;
 }
+
+.tit {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    color: #FFFFFF;
+}
+.prod {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    color: #333333;
+}
+h1 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #990000;
+}
+

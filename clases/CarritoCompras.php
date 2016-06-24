@@ -14,7 +14,7 @@ class CarritoCompras {
     private $ncantidad;
     private $nmontoapagar;
     
-    function __construct($sproducto, $nprecio, $ndescuento, $ntotal, $ncantidad, $nmontoapagar) {
+    function __construct($sproducto= NULL, $nprecio=NULL, $ndescuento=NULL, $ntotal=NULL, $ncantidad=NULL, $nmontoapagar=NULL) {
         $this->sproducto = $sproducto;
         $this->nprecio = $nprecio;
         $this->ndescuento = $ndescuento;

@@ -15,6 +15,7 @@ $oProducto = new Producto();
 <html>
     <head>
         <TITLE>Ferreteria Ortiz - Ferretería Ortiz</TITLE>
+        <META charset="UTF-8">
         <META id="_TopLeft_metaTitle" NAME="Title" content="Ferreteria Ortiz. Tienda online con más de 20.000 productos - Ferretería Ortiz"></META>
         <META id="_TopLeft_metaSubject" NAME="Subject" content="Ferretería Ortiz. Tienda online con más de 20.000 productos."></META>
         <META id="_TopLeft_metaDescription" NAME="Description" content="Ferretería Ortiz. Tienda online con más de 20.000 productos. Herrajes para obra y decoración, metalistería, cerrajería, accesorios para baño, herramientas, ferretería en general."></META>
@@ -57,12 +58,12 @@ $oProducto = new Producto();
                 <td><?= $row->getDfechaTerminoDsto() ?></td>
                 <td align="center">
                     <?php
-                    if (!$carro || !isset($carro[md5($row['idProducto'])]['identificador']) || $carro[md5($row['idProducto'])]['identificador'] != md5($row['idProducto'])) {
+                    if (!$carro || !isset($carro[md5($row->getNidProducto())]['identificador']) || $carro[md5($row->getNidProducto())]['identificador'] != md5($row->getNidProducto())) {
                         ?>
-                        <a href="./cesta/addCart.php?<?php echo SID ?>&id=<?php echo $row['id']; ?>">
+                        <a href="./cesta/addCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
                             <img src="./images/productonoagregado.gif" border="0" title="Agregar al Carrito"></a><?php
                     } else {
-                        ?><a href="./cesta/delCart.php?<?php echo SID ?>&id=<?php echo $row['id']; ?>">
+                        ?><a href="./cesta/delCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
                             <img src="./images/productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php } ?></td>
             </tr><?php } ?>
     </table>

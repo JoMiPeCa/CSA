@@ -2,7 +2,9 @@
 session_start();
 extract($_REQUEST);
 
-require './lib/db_funciones.php';
+require '../lib/db_funciones.php';
+
+$db = dbconnect();
 
 if(!isset($cantidad)){$cantidad=1;}
 $qry=mysql_query("select * from carritocompra where 
