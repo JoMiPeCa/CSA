@@ -57,12 +57,7 @@ include 'librerias.php';
                         <td>Mail:</td>
                         <td><input type="email" id="correo" name="correo" required="true"></td>
                         <td> </td>
-                    </tr>  
-                    <tr>
-                        <td>Subscripción:</td>
-                        <td><input type="text" id="subscripcion" name="subscripcion" required="true"></td>
-                        <td> </td>
-                    </tr>  
+                    </tr>                    
                     <tr>
                         <td>Teléfono:</td>
                         <td><input type="number" id="telefono" name="telefono" required="true"></td>
@@ -70,8 +65,17 @@ include 'librerias.php';
                     </tr>  
                     <tr>
                         <td>Contraseña:</td>
-                        <td><input type="text" id="contraseña" name="contraseña" required="true"></td>
+                        <td><input type="password" id="contraseña" name="contraseña" required="true"></td>
                         <td> </td>
+                        <td>Repita Contraseña:</td>
+                        <td><input type="password" id="contraseña2" name="contraseña2" required="true" ></td>
+                        <td> </td>
+                    </tr>  
+                    <tr>
+                        <td>Desea suscribirse a nuestro boletín mensual?:</td>
+                        <td>Si<input type="radio" id="suscripcion" name="suscripcion" checked="true" >
+                            No<input type="radio" id="suscripcion" name="suscripcion"></td>
+                        <td></td>
                     </tr>  
                     <tr>
                         <td></td>  
