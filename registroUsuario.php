@@ -39,9 +39,14 @@ include 'librerias.php';
                         <td><input name="apellidos" id="apellidos" type="text" required="true"></td>
                         <td> </td>
                     </tr>
+                    <tr>                       
+                        <td>RUN:</td>
+                        <td><input name="run" id="run" type="text" required="true"></td>
+                        <td> </td>
+                    </tr>
                     <tr>
                         <td>Género:</td>
-                        <td><select>
+                        <td><select id="genero" name="genero" required="true">
                                 <option value="">Seleccione...</option>
                                 <option value="1">Mujer</option>
                                 <option value="2">Hombre</option>

@@ -10,7 +10,7 @@ class Cliente {
     private $srun;
     private $snombre;
     private $apellidos;
-    private $csexo;
+    private $ssexo;
     private $dfechanacimiento;
     private $semail;
     private $bSuscripcion;
@@ -21,7 +21,7 @@ class Cliente {
         $this->srun = $srun;
         $this->snombre = $snombre;
         $this->apellidos = $apellidos;
-        $this->csexo = $csexo;
+        $this->ssexo = $csexo;
         $this->dfechanacimiento = $dfechanacimiento;
         $this->semail = $semail;
         $this->bSuscripcion = $bSuscripcion;
@@ -42,7 +42,7 @@ class Cliente {
     }
 
     function getCsexo() {
-        return $this->csexo;
+        return $this->ssexo;
     }
 
     function getDfechanacimiento() {
@@ -78,7 +78,7 @@ class Cliente {
     }
 
     function setCsexo($csexo) {
-        $this->csexo = $csexo;
+        $this->ssexo = $csexo;
     }
 
     function setDfechanacimiento($dfechanacimiento) {
@@ -137,7 +137,7 @@ class Cliente {
             $registro = $querysel->fetch();
             $this->snombre = $registro['nombre'];
             $this->apellidos = $registro['apellido'];
-            $this->csexo = $registro['sexo'];
+            $this->ssexo = $registro['sexo'];
             $this->dfechanacimiento = $registro['fechanacimiento'];
             $this->nTelefono = $registro['telefono'];
             $this->semail = $registro['email'];
@@ -162,7 +162,7 @@ class Cliente {
         $querysel->bindParam(':run', $this->srun);
         $querysel->bindParam(':nombre', $this->snombre);
         $querysel->bindParam(':apellido', $this->apellidos);
-        $querysel->bindParam(':sexo', $this->csexo);
+        $querysel->bindParam(':sexo', $this->ssexo);
         $querysel->bindParam(':fecha', $this->dfechanacimiento);
         $querysel->bindParam(':telefono', $this->nTelefono);
         $querysel->bindParam(':suscripcion', $this->bSuscripcion);
