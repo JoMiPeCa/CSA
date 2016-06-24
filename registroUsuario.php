@@ -18,7 +18,7 @@ include 'librerias.php';
     <center>
         <div id="titlogin"><legend>Registro de usuario.</legend>            
             <table>
-                <form action="accform/accRegistro.php" method="post">
+                <form action="accForm/accRegistro.php" method="post">
                     <!-- private $srun;
                     private $snombre;
                     private $apellidos;
@@ -70,10 +70,10 @@ include 'librerias.php';
                     </tr>  
                     <tr>
                         <td>Contraseña:</td>
-                        <td><input type="password" id="contraseña" name="contraseña" required="true"></td>
+                        <td><input type="password" id="pass" name="pass" required="true"></td>
                         <td> </td>
                         <td>Repita Contraseña:</td>
-                        <td><input type="password" id="contraseña2" name="contraseña2" required="true" ></td>
+                        <td><input type="password"></td>
                         <td> </td>
                     </tr>  
                     <tr>
