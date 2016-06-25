@@ -76,29 +76,29 @@ $cCarro = new CarritoCompras();
             ?>
         </table>
         <div align="center"><span class="prod">Total de Artículos: <?php
-                echo count($carro);
+        echo count($carro);
 //el total de items va a ser igual
 //a la cantidad de elementos que
 //tenga la matriz $carro, valor
 //que obtenemos con la función
 //count o con sizeof 
-                ?></span> 
+            ?></span> 
         </div><br>
         <div align="center"><span class="prod">Total: $<?php
-                echo number_format($suma, 2);
+            echo number_format($suma, 2);
 //mostramos el total de la variable
 //$suma formateándola a 2 decimales 
-                ?></span> 
+            ?></span> 
         </div><br>
         <div align="center"><span class="prod">Continuar la selección de productos</span> 
             <a href="catalogo.php?<?php echo SID; ?>">
                 <img src="images/continuar.gif" width="13" height="13" border="0"></a> 
         </div>
-<?php } else { ?>
+    <?php } else { ?>
         <p align="center"> <span class="prod">No hay productos seleccionados</span>
             <a href="catalogo.php?<?php echo SID; ?>">
                 <img src="images/continuar.gif" width="13" height="13" border="0"></a> 
-    <?php } ?>
+        <?php } ?>
     </p>
     <?php
     require './marcoInferior.php';

@@ -1,5 +1,5 @@
 <?php
-include 'librerias.php';
+include ('../librerias.php');
 $usr = new Cliente("", "", "", "", "", $_POST['usuario'], "", "", $_POST['clave']);
 
 session_start();
@@ -9,5 +9,5 @@ if ($usr->VerificaAcceso()) {
 }
 ?>
 <script>
-    document.location.href = "index.php";
+    document.location.href = "../index.php";
 </script>
