@@ -21,7 +21,7 @@ if (!isset($_SESSION["oUsuario"])) {
     $oUsr = $_SESSION["oUsuario"];
 }
 ?>
-    
+
 <?php
 $cCarro = new CarritoCompras();
 ?>
@@ -39,7 +39,7 @@ $cCarro = new CarritoCompras();
     if ($carro) {
         ?>
         <table width="720" border="0" cellspacing="0" cellpadding="0" align="center">
-            <tr bgcolor="#333333" class="tit"> 
+            <tr bgcolor="#339333" class="tit"> 
                 <td width="105">Producto</td>
                 <td width="207">Precio</td>
                 <td colspan="2" align="center">Cantidad de Unidades</td>
@@ -69,7 +69,7 @@ $cCarro = new CarritoCompras();
                         <td width="136" align="center"> 
                             <input name="cantidad" type="text" id="cantidad" value="<?php echo $v['cantidad'] ?>" size="8">
                             <input name="id" type="hidden" id="id" value="<?php echo $v['id'] ?>"> </td>
-                        <td align="center"><a href="delCart.php?<?php echo SID ?>&id=<?php echo $v['id'] ?>"><img src="trash.gif" width="12" height="14" border="0"></a></td>
+                        <td align="center"><a href="delCart.php?<?php echo SID ?>&id=<?php echo $v['id'] ?>"><img src="images/trash.gif" width="12" height="14" border="0"></a></td>
                         <td align="center"> 
                             <input name="imageField" type="image" src="images/actualizar.gif" width="20" height="20" border="0"></td>
                     </tr></form>
@@ -98,12 +98,12 @@ $cCarro = new CarritoCompras();
         </div><br>
         <div align="center"><span class="prod">Continuar la selección de productos</span> 
             <a href="catalogo.php?<?php echo SID; ?>">
-                <img src="continuar.gif" width="13" height="13" border="0"></a> 
+                <img src="images/continuar.gif" width="13" height="13" border="0"></a> 
         </div>
     <?php } else { ?>
         <p align="center"> <span class="prod">No hay productos seleccionados</span>
             <a href="catalogo.php?<?php echo SID; ?>">
-                <img src="continuar.gif" width="13" height="13" border="0"></a> 
+                <img src="images/continuar.gif" width="13" height="13" border="0"></a> 
         <?php } ?>
     </p>
     <?php
