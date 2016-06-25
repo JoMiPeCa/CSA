@@ -5,7 +5,7 @@ $usr = new Cliente();
 <center>
     <div id="titlogin"><legend>Registro de usuario.</legend>            
         <table>
-            <form action="accForm/accRegistro.php" method="post">
+            <form action="../accForm/accRegistro.php" method="post">
                 <!-- private $srun;
                 private $snombre;
                 private $apellidos;

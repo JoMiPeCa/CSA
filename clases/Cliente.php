@@ -193,7 +193,7 @@ class Cliente {
         return $valaux;
     }
 
-    function ActualizaCliente($srun,$snombre,$sapel,$ses,$sfec,$ntel,$bool,$snewpwd) { //UPDATE DEL CRUD!
+    function ActualizaCliente($srun, $snombre, $sapel, $ses, $sfec, $ntel, $bool, $snewpwd) { //UPDATE DEL CRUD!
         $db = dbconnect();
         /* Definición del query que permitira ingresar un nuevo registro */
         $sqlupd = "UPDATE usuario runusuario=:run,nombre=:nombre,apellido=:apellido,sexo=:sexo,fechanacimiento=:fecha,telefono=:telefono,suscripcion=:suscripcion,pass=:pass) where email=:email";
@@ -216,7 +216,7 @@ class Cliente {
 
         return $valaux;
     }
-    
+
     function DeleteCliente($email) { // DELETE DEL CRUD!
         $db = dbconnect();
         /* Definición del query que permitira actualizar la clave */
@@ -233,4 +233,5 @@ class Cliente {
 
         return $valaux;
     }
+
 }
