@@ -150,7 +150,7 @@ class Cliente {
         }
     }
 
-    function CreaCliente() { //CREATE DEL CRUD!
+    function CreaCliente($semail, $srun, $snombre, $apellidos, $ssexo, $dfechanacimiento, $nTelefono, $bSuscripcion, $spass) { //CREATE DEL CRUD!
         $db = dbconnect();
         /* Definición del query que permitira ingresar un nuevo registro */
         $sqlsel = "INSERT INTO usuario (email,runusuario,nombre,apellido,sexo,fechanacimiento,telefono,suscripcion,pass) VALUES (:email,:run,:nombre,:apellido,:sexo,:fecha,:telefono,:suscripcion,:pass)";
@@ -158,15 +158,15 @@ class Cliente {
         $querysel = $db->prepare($sqlsel);
         /* Asignación de parametros utilizando bindparam */
         //:email,:run,:nombre,:apellido,:sexo,:fecha,:telefono,:suscripcion,:pass
-        $querysel->bindParam(':email', $this->semail);
-        $querysel->bindParam(':run', $this->srun);
-        $querysel->bindParam(':nombre', $this->snombre);
-        $querysel->bindParam(':apellido', $this->apellidos);
-        $querysel->bindParam(':sexo', $this->ssexo);
-        $querysel->bindParam(':fecha', $this->dfechanacimiento);
-        $querysel->bindParam(':telefono', $this->nTelefono);
-        $querysel->bindParam(':suscripcion', $this->bSuscripcion);
-        $querysel->bindParam(':pass', $this->spass);
+        $querysel->bindParam(':email', $semail);
+        $querysel->bindParam(':run', $srun);
+        $querysel->bindParam(':nombre', $snombre);
+        $querysel->bindParam(':apellido', $apellidos);
+        $querysel->bindParam(':sexo', $ssexo);
+        $querysel->bindParam(':fecha', $dfechanacimiento);
+        $querysel->bindParam(':telefono', $nTelefono);
+        $querysel->bindParam(':suscripcion', $bSuscripcion);
+        $querysel->bindParam(':pass', $spass);
 
 
         $datos = $querysel->execute();

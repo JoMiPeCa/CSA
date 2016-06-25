@@ -10,7 +10,7 @@ $semail = $_POST['correo'];
 $bSuscripcion = $_POST['suscripcion'];
 $nTelefono = $_POST['telefono'];
 $spass = $_POST['contraseña'];
-$usr->CreaCliente($srun, $snombre, $apellidos, $ssexo, $dfechanacimiento, $semail, $bSuscripcion, $nTelefono, $spass);
+$usr->CreaCliente($semail, $srun, $snombre, $apellidos, $ssexo, $dfechanacimiento, $nTelefono, $bSuscripcion=="on"?true:false, $spass);
 ?>
 <script>
     document.location.href = "<?= PATHURL ?>carroCompra.php";
