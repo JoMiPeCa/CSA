@@ -1,7 +1,7 @@
 <center>
     <div id="titlogin">
         Acceso de usuario.
-        <form action="../accForm/accLogin.php" method="POST" id="loginForm">
+        <form action="accForm/accLogin.php" method="POST" id="loginForm">
             <div>Usuario:</div>
             <div><input name="usuario" type=text required="true"></div></br>
             <div>Clave:</div>
@@ -9,7 +9,7 @@
             <input id="acceder" type="submit" value="Acceder"></br>   
         </form>
 
-        <form action="registroUsuario.php">
+        <form action="../registroUsuario.php">
             <input id="registro" type="submit" value="Registrar">
         </form>
     </div>
