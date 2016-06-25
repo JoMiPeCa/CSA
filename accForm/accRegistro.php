@@ -13,6 +13,6 @@ $spass = $_POST['contraseña'];
 $usr->CreaCliente($semail, $srun, $snombre, $apellidos, $ssexo, $dfechanacimiento, $nTelefono, $bSuscripcion=="on"?true:false, $spass);
 ?>
 <script>
-    document.location.href = "<?= PATHURL ?>carroCompra.php";
+    document.location.href = "<?= PATHURL ?>catalogo.php";
 </script>
 
