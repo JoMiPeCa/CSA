@@ -1,8 +1,8 @@
 <?php
-include 'librerias.php';
+include ('./librerias.php');
 session_start();
 session_unset();
 ?>
 <script>
-	document.location.href="index.php";
+    document.location.href = "<?= PATHURL ?>index.php";
 </script>

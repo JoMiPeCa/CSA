@@ -39,6 +39,10 @@
                                             <tr>
                                                 <td><a href="http://www.facebook.com/johny.alboo" target="_blank"><img src="images/facebook.gif" alt="Siguenos en facebook" width="23" height="23" border="0"></a></td>
                                                 <td><a href="http://www.elblogdeferreteriaortiz.es" target="_blank"><img src="images/blog.gif" alt="Siguenos en nuestro blog" width="23" height="23" border="0"></a></td>
+                                                <td><?php if (isset($_SESSION["oUsuario"])) { ?>
+                                                    <a href="logout.php" target="_self"><img src="images/logo_cerrar_sesion.png" alt="CERRAR SESION" width="23" height="23" border="0"></a>
+                                                </td>
+                                                <td><a href="logout.php" target="_self"><b>Cerrar Sesion</b></a><?php } ?></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -58,7 +62,7 @@
                                         </table>
                                     </td>
                                     <td width="24%">
-                                        
+
                                     </td>
                                     <td>
                                         &nbsp;
@@ -67,7 +71,7 @@
                             </table>
                         </td>            
                         <td>&nbsp;</td>
-                        
+
                     </tr>
                 </table>
                 <div align="center">
@@ -82,8 +86,7 @@
                                 <br>
                             </td>
                             <td width="100%" align="left" valign="top">
-                            
-                            <!-- INICIO BANDEJON CENTRAL -->
-                            
-                            
-                            
+
+                                <!-- INICIO BANDEJON CENTRAL -->
+
+

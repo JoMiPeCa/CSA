@@ -1,3 +1,7 @@
+<?php
+include ('librerias.php');
+session_start();
+?>
 <html>
     <head>
         <TITLE>Ferreteria Ortiz - Ferretería Ortiz</TITLE>
@@ -27,6 +31,7 @@
         <br/>
         <br/>
         <br/>
+      
 
         <h4>OFERTAS DESTACADAS DE LA SEMANA</h4>
     </center>

@@ -1,3 +1,18 @@
+<?php
+session_start();
+?>
+
+<?php
+if (isset($_SESSION["oUsuario"])) {
+    ?>
+    }
+    <script>
+        document.location.href = "<?= PATHURL ?>carroCompra.php";
+    </script>
+    <?php
+}
+?>
+
 <center>
     <div id="titlogin">
         Acceso de usuario.

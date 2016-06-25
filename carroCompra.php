@@ -1,22 +1,28 @@
 <!--
 LEER PAGINA E IMPLEMENTAR CARRO DE COMPRAS
 EL ACTUAL CARRO ES MUY COMPLICADO
-
 http://www.desarrolloweb.com/articulos/carro-de-compras-en-php.html
-
 -->
+<?php
+require './librerias.php';
+session_start();
+?>
 
 <?php
-session_start();
-require './librerias.php';
+if (!isset($_SESSION["oUsuario"])) {
+    ?>
 
-
-if (isset($_SESSION['carro']))
-    $carro = $_SESSION['carro'];
-else
-    $carro = false;
+    }
+    <script>
+        document.location.href = "<?= PATHURL ?>login.php";
+    </script>
+    <?php
+} else {
+    $oUsr = $_SESSION["oUsuario"];
+}
 ?>
-<?php 
+    
+<?php
 $cCarro = new CarritoCompras();
 ?>
 <html>
@@ -55,7 +61,7 @@ $cCarro = new CarritoCompras();
 //este es el contador que usamos
 //para los colores alternos 
                 ?>
-            <form name="a<?php echo $v['identificador'] ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v['identificador'] ?>">
+                <form name="a<?php echo $v['identificador'] ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v['identificador'] ?>">
                     <tr bgcolor="<?php echo $color[$contador % 2]; ?>" class='prod'> 
                         <td><?php echo $v['producto'] ?></td>
                         <td><?php echo $v['precio'] ?></td>
