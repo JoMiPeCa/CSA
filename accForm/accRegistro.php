@@ -11,6 +11,8 @@ $bSuscripcion = $_POST['suscripcion'];
 $nTelefono = $_POST['telefono'];
 $spass = md5($_POST['contraseña']);
 $usr->CreaCliente($semail, $srun, $snombre, $apellidos, $ssexo, $dfechanacimiento, $nTelefono, $bSuscripcion=="on"?true:false, $spass);
+
+include '../registromail.php';
 ?>
 <script>
     document.location.href = "<?= PATHURL ?>catalogo.php";

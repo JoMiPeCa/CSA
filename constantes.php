@@ -10,7 +10,7 @@ define("TITULOAPP","Super WebSite");
  */
 
 define('GMAIL','ferreteria.ortiz.chile@gmail.com');
-define('GNAME','');
+define('GNAME','No Responder Ferreteria Ortiz');
 define('GUSR','ferreteria.ortiz.chile@gmail.com');
 define('GPWD','ferreteriarook');
 ?>
