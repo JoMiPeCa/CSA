@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'librerias.php';
 ?>
 <html lang=''>

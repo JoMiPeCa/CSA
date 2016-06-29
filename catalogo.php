@@ -1,4 +1,5 @@
 <?php
+session_start();
 ob_start("ob_gzhandler");
 
 require 'librerias.php';
@@ -59,11 +60,11 @@ $oProducto = new Producto();
                 <td align="center">
                     <?php
                     if (!$carro || !isset($carro[md5($row->getNidProducto())]['identificador']) || $carro[md5($row->getNidProducto())]['identificador'] != md5($row->getNidProducto())) {
-                        ?>
-                        <a href="addCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
+                    ?>
+                        <a href="addCart.php?sid=<?php echo session_id() ?>&id=<?php echo $row->getNidProducto(); ?>">
                             <img src="images/productonoagregado.gif" border="0" title="Agregar al Carrito"></a><?php
                     } else {
-                        ?><a href="delCart.php?<?php echo SID ?>&id=<?php echo $row->getNidProducto(); ?>">
+                        ?><a href="delCart.php?sid=<?php echo session_id() ?>&id=<?php echo $row->getNidProducto(); ?>">
                             <img src="images/productoagregado.gif" border="0" title="Quitar del Carrito"></a><?php } ?></td>
             </tr><?php } ?>
     </table>

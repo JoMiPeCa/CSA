@@ -142,8 +142,8 @@ class Cliente {
             $this->nTelefono = $registro['telefono'];
             $this->semail = $registro['email'];
             $this->bSuscripcion = $registro['suscripcion'];
-            $this->spass = $registro['password'];
-            $this->srun = $registro['run'];
+            $this->spass = $registro['pass'];
+            $this->srun = $registro['runusuario'];
             return true;
         } else {
             return false;
