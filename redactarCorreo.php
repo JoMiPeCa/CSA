@@ -8,12 +8,16 @@
     require './marcoSuperior.php';
     ?>
     <center>
-        <form action='envioemail.php' method='post'>
+        <form action='enviomail.php' method='post'>
             <table>
-                De: ferreteria.ortiz.chile@gmail.com<br>
+                <br>
                 <tr>
-                    <td>Para:</td>
-                    <td><input type="text" name=para></td>
+                    <td>Nombre:</td>
+                    <td><input type="text" name=nombre></td>
+                </tr>
+                <tr>
+                    <td>Correo:</td>
+                    <td><input type="text" name=remitente></td>
                 </tr>
                 <tr>
                     <td>Asunto:</td>

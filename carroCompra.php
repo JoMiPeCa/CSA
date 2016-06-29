@@ -1,6 +1,4 @@
 <!--
-LEER PAGINA E IMPLEMENTAR CARRO DE COMPRAS
-EL ACTUAL CARRO ES MUY COMPLICADO
 http://www.desarrolloweb.com/articulos/carro-de-compras-en-php.html
 -->
 <?php

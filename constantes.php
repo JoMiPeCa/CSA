@@ -5,8 +5,12 @@ define("TITULOAPP","Super WebSite");
 ?>
 
 <?php
-define('GMAIL','');
+/*
+ * Constantes de GMAIL
+ */
+
+define('GMAIL','ferreteria.ortiz.chile@gmail.com');
 define('GNAME','');
-define('GUSR','');
-define('GPWD','');
+define('GUSR','ferreteria.ortiz.chile@gmail.com');
+define('GPWD','ferreteriarook');
 ?>
