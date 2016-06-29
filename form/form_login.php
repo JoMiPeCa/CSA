@@ -12,7 +12,7 @@ if (isset($_SESSION["oUsuario"])) {
 <center>
     <div id="titlogin">
         Acceso de usuario.
-        <form action="accForm/accLogin.php" method="POST" id="loginForm">
+        <form action="./accForm/accLogin.php" method="POST" id="loginForm">
             <div>Usuario:</div>
             <div><input name="usuario" type=text required="true"></div></br>
             <div>Clave:</div>
