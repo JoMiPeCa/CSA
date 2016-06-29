@@ -372,3 +372,7 @@ ALTER TABLE `subcategoria`
   ADD CONSTRAINT `fk_SubCategoria_Categoria` FOREIGN KEY (`Categoria_idCategoria`) REFERENCES `categoria` (`idCategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 
+--
+-- Alteracion de la tabla 'carritoCompra'
+--
+ALTER TABLE carritoCompra DROP PRIMARY KEY, ADD PRIMARY KEY (idCarritoCompra, idProducto);
