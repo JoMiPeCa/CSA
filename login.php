@@ -9,9 +9,7 @@ include 'librerias.php';
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Acceso de usuario</title>
         <script src="<?= PATHURL; ?>js/jquery-latest.min.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="<?= PATHURL; ?>css/font-awesome.min.css"> <!-- Y ESTE ESTILO CUAL ES? -->
         <link rel="stylesheet" href="<?= PATHURL; ?>css/ie.css">
-        <link rel="stylesheet" href="<?= PATHURL; ?>css/sitio.css"> <!-- Y ESTE ESTILO CUAL ES? -->
     </head>
     <?php
     require './marcoSuperior.php';

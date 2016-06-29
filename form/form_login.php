@@ -20,7 +20,7 @@ if (isset($_SESSION["oUsuario"])) {
             <input id="acceder" type="submit" value="Acceder"></br>   
         </form>
 
-        <form action="../registroUsuario.php">
+        <form action="./registroUsuario.php">
             <input id="registro" type="submit" value="Registrar">
         </form>
     </div>
