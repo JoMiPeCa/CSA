@@ -18,12 +18,15 @@ if (!isset($_SESSION["oUsuario"])) {
     <?php
 } else {
     $usr = $_SESSION["oUsuario"];
-    $carro = true;
+    
 }
 ?>
 
 <?php
 $cCarro = new CarritoCompras();
+$carro2 = $cCarro->Selecciona();
+$carroID = $carro2->getSidcarritocompra();
+$carroID===null?$carro=false:$carro=true;
 ?>
 <html>
     <head>
@@ -50,55 +53,42 @@ $cCarro = new CarritoCompras();
             $color = array("#ffffff", "#F0F0F0");
             $contador = 0;
             $suma = 0;
-            foreach ($carro as $k => $v) {
-//recorremos la matriz que tiene
-//todos los valores del carro, 
-//calculamos el subtotal y el
-// total 
-                $subto = $v['cantidad'] * $v['precio'];
+            foreach ($carro2 as $k => $v) {
+                $subto = $v->getNcantidad() * $v->getNmontoapagar();
                 $suma = $suma + $subto;
                 $contador++;
-//este es el contador que usamos
-//para los colores alternos 
                 ?>
-                <form name="a<?php echo $v['identificador'] ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v['identificador'] ?>">
+            <form name="a<?php echo $v->getSidcarritocompra() ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v->getSidcarritocompra() ?>">
                     <tr bgcolor="<?php echo $color[$contador % 2]; ?>" class='prod'> 
-                        <td><?php echo $v['producto'] ?></td>
-                        <td><?php echo $v['precio'] ?></td>
-                        <td width="43" align="center"><?php echo $v['cantidad'] ?></td>
+                        <td><?php echo $v->getSidproducto() ?></td>
+                        <td><?php echo $v->getNmontoapagar() ?></td>
+                        <td width="43" align="center"><?php echo $v->getNcantidad() ?></td>
                         <td width="136" align="center"> 
-                            <input name="cantidad" type="text" id="cantidad" value="<?php echo $v['cantidad'] ?>" size="8">
+                            <input name="cantidad" type="text" id="cantidad" value="<?php echo $v->getNcantidad() ?>" size="8">
                             <input name="id" type="hidden" id="id" value="<?php echo $v['id'] ?>"> </td>
-                        <td align="center"><a href="delCart.php?<?php echo SID ?>&id=<?php echo $v['id'] ?>"><img src="images/trash.gif" width="12" height="14" border="0"></a></td>
+                        <td align="center"><a href="delCart.php?<?php echo SID ?>&id=<?php echo $v->getSidproducto() ?>"><img src="images/trash.gif" width="12" height="14" border="0"></a></td>
                         <td align="center"> 
                             <input name="imageField" type="image" src="images/actualizar.gif" width="20" height="20" border="0"></td>
                     </tr></form>
                 <?php
-//por cada item creamos un
-//formulario que submite a
-//agregar producto y un link
-//que permite eliminarlos 
             }
             ?>
         </table>
         <div align="center"><span class="prod">Total de Artículos: <?php
-                echo count($carro);
-//el total de items va a ser igual
-//a la cantidad de elementos que
-//tenga la matriz $carro, valor
-//que obtenemos con la función
-//count o con sizeof 
+                echo count($cCarro);
                 ?></span> 
         </div><br>
         <div align="center"><span class="prod">Total: $<?php
                 echo number_format($suma, 2);
-//mostramos el total de la variable
-//$suma formateándola a 2 decimales 
                 ?></span> 
         </div><br>
         <div align="center"><span class="prod">Continuar la selección de productos</span> 
             <a href="catalogo.php?<?php echo SID; ?>">
                 <img src="images/continuar.gif" width="13" height="13" border="0"></a> 
+        </div>
+        <div>
+            <input type="button" onclick="parent.location='boleta.php'" value='Descargar Resumen'>
+            <input type="button" onclick="parent.location='#'" value='Pagar'>
         </div>
     <?php } else { ?>
         <p align="center"> <span class="prod">No hay productos seleccionados</span>

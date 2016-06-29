@@ -13,6 +13,7 @@ class CarritoCompras {
     private $ntotal;
     private $ncantidad;
     private $nmontoapagar;
+    private $querysel;
     
     function __construct($sidcarritocompra= NULL, $sidproducto=NULL, $ldscto=NULL, $ntotal=NULL, $ncantidad=NULL, $nmontoapagar=NULL) {
         $this->sidcarritocompra = $sidcarritocompra;

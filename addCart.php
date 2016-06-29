@@ -8,6 +8,7 @@ function producto_esta_en_carro($db, $carro_id, $producto_id) {
     $qry="select 1 from carritoCompra where idCarritoCompra=".$carro_id." and idProducto=".$producto_id;
     $exe = $db->prepare($qry);
     return $exe->execute();
+//    
 //    $row=$exe->fetch();
 //    if ($row) {
 //		return true;
@@ -42,7 +43,7 @@ function agregar_producto_a_carro($db, $carro_id, $producto) {
 			 $producto['nombreProducto'].
 		 "')";
 	$exe = $db->prepare($qry);
-    $exe->execute();
+    return $exe->execute();
 }
 
 if(!isset($_SESSION['carro_id'])) {
@@ -54,9 +55,14 @@ $producto_id = $id;
 if (producto_esta_en_carro($db, $carro_id, $producto_id)) {
 	incrementar_cantidad_producto_en_carro($db, $carro_id, $producto_id);
 } else {
-	$producto = buscar_producto($db, $producto_id);
-	agregar_producto_a_carro($db, $carro_id, $producto);
+        $producto = buscar_producto($db, $producto_id);
+        if($producto){
+            agregar_producto_a_carro($db, $carro_id, $producto);
+        }
+        else{
+            echo 'ERROR PRODUCTO NO ENCOTNRADO';
+        }
 }
 
-header("Location:catalogo.php?".SID);
+header("Location:catalogo.php?".$carro_id);
 ?>
