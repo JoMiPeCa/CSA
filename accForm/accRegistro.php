@@ -9,7 +9,7 @@ $dfechanacimiento = $_POST['fecha'];
 $semail = $_POST['correo'];
 $bSuscripcion = $_POST['suscripcion'];
 $nTelefono = $_POST['telefono'];
-$spass = $_POST['contraseña'];
+$spass = md5($_POST['contraseña']);
 $usr->CreaCliente($semail, $srun, $snombre, $apellidos, $ssexo, $dfechanacimiento, $nTelefono, $bSuscripcion=="on"?true:false, $spass);
 ?>
 <script>
