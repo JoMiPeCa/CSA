@@ -18,9 +18,8 @@ class PDF extends FPDF {
 //Cargar Nuevo Datos
     function LoadData() {
         $cCarro = new CarritoCompras();
-        $data = array();
         while ($carro2 = $cCarro->Selecciona()) {
-            $data[] = $carro2->getSidproducto() . $carro2->getNtotal() . $carro2->getNcantidad() . $carro2->getNmontoapagar();
+            $data = array($carro2->getSidproducto(),$carro2->getNtotal(),$carro2->getNcantidad(),$carro2->getNmontoapagar());
         }
         return $data;
     }
@@ -35,8 +34,8 @@ class PDF extends FPDF {
         $this->Ln();
         // Datos
         foreach ($data as $row) {
-            $this->Cell($w[0], 6, $row[0], 'LR');
-            $this->Cell($w[1], 6, $row[1], 'LR');
+            $this->Cell($w[0], 6, number_format($row[0]), 'LR', 0, 'R');
+            $this->Cell($w[1], 6, number_format($row[1]), 'LR', 0, 'R');
             $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R');
             $this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R');
             $this->Ln();
