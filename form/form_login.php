@@ -1,7 +1,6 @@
 <?php
 if (isset($_SESSION["oUsuario"])) {
-    ?>
-    }
+    ?>    
     <script>
         document.location.href = "<?= PATHURL ?>carroCompra.php";
     </script>
