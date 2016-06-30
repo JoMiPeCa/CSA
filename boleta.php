@@ -10,8 +10,9 @@ class PDF extends FPDF {
         // Leer las líneas del fichero
         $lines = file($file);
         $data = array();
-        foreach ($lines as $line)
+        foreach ($lines as $line) {
             $data[] = explode(';', trim($line));
+        }
         return $data;
     }
 
@@ -19,7 +20,7 @@ class PDF extends FPDF {
     function LoadData() {
         $cCarro = new CarritoCompras();
         while ($carro2 = $cCarro->Selecciona()) {
-            $data = array($carro2->getSidproducto(),$carro2->getNtotal(),$carro2->getNcantidad(),$carro2->getNmontoapagar());
+            $data = array($carro2->getSidproducto(), $carro2->getNtotal(), $carro2->getNcantidad(), $carro2->getNmontoapagar());
         }
         return $data;
     }
@@ -29,8 +30,9 @@ class PDF extends FPDF {
         // Anchuras de las columnas
         $w = array(40, 35, 45, 40);
         // Cabeceras
-        for ($i = 0; $i < count($header); $i++)
+        for ($i = 0; $i < count($header); $i++) {
             $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C');
+        }
         $this->Ln();
         // Datos
         foreach ($data as $row) {
@@ -53,4 +55,3 @@ $pdf->SetFont('Arial', '', 14);
 $pdf->AddPage();
 $pdf->ImprovedTable($header, $data);
 $pdf->Output();
-?>

@@ -99,5 +99,3 @@ $cCarro = new CarritoCompras();
     require './marcoInferior.php';
     ?>
 </HTML>
-
-
