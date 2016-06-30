@@ -88,7 +88,13 @@ class CarritoCompras {
 
         $registro = $this->querysel->fetch();
         if ($registro) {
-            return new self($registro['idCarritoCompra'], $registro['idProducto'], $registro['dscto'], $registro['total'], $registro['cantidad'], $registro['montoPagar'], $registro['carritoCompracol']);
+            return new self($registro['idCarritoCompra'], 
+                    $registro['idProducto'],
+                    $registro['dscto'],
+                    $registro['total'],
+                    $registro['cantidad'],
+                    $registro['montoPagar']
+                    /*,    $registro['carritoCompracol']*/);
         } else { 
             return false;
         }

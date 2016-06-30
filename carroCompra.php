@@ -24,7 +24,7 @@ if (!isset($_SESSION["oUsuario"])) {
 
 <?php
 $cCarro = new CarritoCompras();
-$carro2 = $cCarro->Selecciona();
+
 //$carroID = $carro2->getSidcarritocompra();
 //$carroID===null?$carro=false:$carro=true;
 ?>
@@ -53,10 +53,11 @@ $carro2 = $cCarro->Selecciona();
             $color = array("#ffffff", "#F0F0F0");
             $contador = 0;
             $suma = 0;
-            foreach ($carro2 as $k => $v) {
+                  while ($v=$cCarro->Selecciona()) {
                 $subto = $v->getNcantidad() * $v->getNmontoapagar();
                 $suma = $suma + $subto;
                 $contador++;
+                echo "HOLA";
                 ?>
             <form name="a<?php echo $v->getSidcarritocompra() ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v->getSidcarritocompra() ?>">
                     <tr bgcolor="<?php echo $color[$contador % 2]; ?>" class='prod'> 
