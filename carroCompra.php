@@ -18,15 +18,15 @@ if (!isset($_SESSION["oUsuario"])) {
     <?php
 } else {
     $usr = $_SESSION["oUsuario"];
-    
+    $carro = true;
 }
 ?>
 
 <?php
 $cCarro = new CarritoCompras();
 $carro2 = $cCarro->Selecciona();
-$carroID = $carro2->getSidcarritocompra();
-$carroID===null?$carro=false:$carro=true;
+//$carroID = $carro2->getSidcarritocompra();
+//$carroID===null?$carro=false:$carro=true;
 ?>
 <html>
     <head>

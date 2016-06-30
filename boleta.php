@@ -1,29 +1,57 @@
 <?php
 
-    $content = "
-<page>
-    <script src="."http://www.w3schools.com/lib/w3data.js"."></script>
+require('fpdf.php');
+require 'librerias.php';
 
-<body>
+class PDF extends FPDF {
 
-<div w3-include-html="."boleta.php"."></div>
+// Cargar los datos
+    function Load2Data($file) {
+        // Leer las líneas del fichero
+        $lines = file($file);
+        $data = array();
+        foreach ($lines as $line)
+            $data[] = explode(';', trim($line));
+        return $data;
+    }
 
-<script>
-w3IncludeHTML();
-</script>
-</body>
-</page>"; 
+//Cargar Nuevo Datos
+    function LoadData() {
+        $cCarro = new CarritoCompras();
+        $data = array();
+        while ($carro2 = $cCarro->Selecciona()) {
+            $data[] = $carro2->getSidproducto() . $carro2->getNtotal() . $carro2->getNcantidad() . $carro2->getNmontoapagar();
+        }
+        return $data;
+    }
 
-    require_once(dirname(__FILE__).'/modulos/html2pdf/html2pdf.class.php');
-	/*
-	Constructor Clase HTML2PDF
-	http://wiki.spipu.net/doku.php?id=html2pdf:en:v4:accueil#initalizing_the_html2pdf_class
-	*/
-    $html2pdf = new HTML2PDF('P','LETTER','es');
-    $html2pdf->WriteHTML($content);
-	/*
-	Opción de Salida: 'D', forzar descarga
-	http://wiki.spipu.net/doku.php?id=html2pdf:es:v3:salida
-	*/
-    $html2pdf->Output('boleta.pdf','D');
+// Una tabla más completa
+    function ImprovedTable($header, $data) {
+        // Anchuras de las columnas
+        $w = array(40, 35, 45, 40);
+        // Cabeceras
+        for ($i = 0; $i < count($header); $i++)
+            $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C');
+        $this->Ln();
+        // Datos
+        foreach ($data as $row) {
+            $this->Cell($w[0], 6, $row[0], 'LR');
+            $this->Cell($w[1], 6, $row[1], 'LR');
+            $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R');
+            $this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R');
+            $this->Ln();
+        }
+        // Línea de cierre
+        $this->Cell(array_sum($w), 0, '', 'T');
+    }
+
+}
+
+$pdf = new PDF();
+$header = array('Producto', 'Precio', 'Unidades', 'Total');
+$data = $pdf->LoadData();
+$pdf->SetFont('Arial', '', 14);
+$pdf->AddPage();
+$pdf->ImprovedTable($header, $data);
+$pdf->Output();
 ?>
