@@ -10,8 +10,6 @@ session_start();
 if (!isset($_SESSION["oUsuario"])) {
     $carro = false;
     ?>
-
-    }
     <script>
         document.location.href = "<?= PATHURL ?>login.php";
     </script>
@@ -53,13 +51,13 @@ $cCarro = new CarritoCompras();
             $color = array("#ffffff", "#F0F0F0");
             $contador = 0;
             $suma = 0;
-                  while ($v=$cCarro->Selecciona()) {
+            while ($v = $cCarro->Selecciona()) {
                 $subto = $v->getNcantidad() * $v->getNmontoapagar();
                 $suma = $suma + $subto;
                 $contador++;
                 echo "HOLA";
                 ?>
-            <form name="a<?php echo $v->getSidcarritocompra() ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v->getSidcarritocompra() ?>">
+                <form name="a<?php echo $v->getSidcarritocompra() ?>" method="post" action="addCart.php?<?php echo SID ?>" id="a<?php echo $v->getSidcarritocompra() ?>">
                     <tr bgcolor="<?php echo $color[$contador % 2]; ?>" class='prod'> 
                         <td><?php echo $v->getSidproducto() ?></td>
                         <td><?php echo $v->getNmontoapagar() ?></td>
@@ -88,8 +86,8 @@ $cCarro = new CarritoCompras();
                 <img src="images/continuar.gif" width="13" height="13" border="0"></a> 
         </div>
         <div>
-            <input type="button" onclick="parent.location='boleta.php'" value='Descargar Resumen'>
-            <input type="button" onclick="parent.location='#'" value='Pagar'>
+            <input type="button" onclick="parent.location = 'boleta.php'" value='Descargar Resumen'>
+            <input type="button" onclick="parent.location = '#'" value='Pagar'>
         </div>
     <?php } else { ?>
         <p align="center"> <span class="prod">No hay productos seleccionados</span>
